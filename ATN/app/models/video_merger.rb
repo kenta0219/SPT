@@ -1,0 +1,2 @@
+class VideoMerger < ApplicationRecord
+end
