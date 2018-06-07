@@ -1,0 +1,13 @@
+<div class="new-video">
+	<div class="space"></div>
+	<div class="video-contents">
+		<div class="new-title">動画投稿画面</div>
+		<%= form_for(@video, url: create_video_path) do |f| %>
+			<div class="new-video-title">動画タイトル</div>
+			<%= f.text_field :video_name %>
+			<div class="new-video-name">ビデオ</div>
+			<%= f.attachment_field :video %><br><br>
+			<%= f.submit '投稿', class: "new-video-button" %>
+		<% end %>
+	</div>
+</div>

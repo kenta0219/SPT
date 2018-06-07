@@ -1,5 +1,17 @@
 <div class="mypage">
-	<div class="mypage-contents">
-		<h1>MyPage</h1>
+	<div class="space"></div>
+	<div class="mypage-contents clearfix">
+		<div class="mypage-title">MyPage</div>
+			<div class="mypage-text clearfix">
+				<div class="user-image">画像</div>
+				<div class="user-name">name</div>
+				<div class="user-email">email</div>
+				<div class="user-favorite-sports">お気に入り</div>
+					<%= link_to 'edit', edit_user_path %>
+			</div>
+
+			<div class="mypage-history clearfix">
+				閲覧履歴か自分があげた動画
+			</div>
 	</div>
 </div>

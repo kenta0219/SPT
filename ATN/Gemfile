@@ -65,6 +65,8 @@ gem 'refile-mini_magick'
 
 gem 'refile', require: 'refile/rails', github: 'manfe/refile'
 
+gem 'material_icons'
+
 
 
 

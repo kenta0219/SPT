@@ -1,18 +1,154 @@
 
-/*top*/
-h1 {
-	color:red;
-}
-.top-user {
-	background-color: #878a8e;
-}
-.top-image-field {
-	background-color: #232d3a;
-	height:100px;
+
+header {
 	width:100%;
 }
+
+/*Log_in,sign_up*/
+.login-page {
+	width:100%;
+	text-align: center;
+}
+.login-contents {
+	margin: 0 200px;
+	font-size:20px;
+	font-family: serif;
+}
+.title {
+	font-family: verdana;
+	font-size: 70px;
+}
+.signup-page {
+	width:100%;
+	text-align:center;
+}
+.signup-contents {
+	font-size:20px;
+	font-family: serif;
+	margin:0 200px;
+}
+
+
+/*top_item*/
+.header-menu {
+	width:100%;
+	height:70px;
+	background-color: white;
+	position:absolute;
+
+}
+.header-nav-box {
+	height: 50px;
+	text-align: right;
+	float:left;
+	width:60%;
+	padding:10px;
+}
+.site-name {
+	padding:10px;
+	float:left;
+	width: 30%;
+	font-size:30px;
+}
+.user-nav-icon {
+	display:inline-block;
+	padding:10px 20px;
+	font-size: 50px;
+}
+.top-video {
+	background-color: #878a8e;
+	width:100%;
+}
+.top-main-field {
+	width:100%;
+	height:700px;
+}
+.top-image-field {
+	height:500px;
+	width:100%;
+}
+
+
+
 .top-main-visual {
 	height:200px;
 	width:100%;
 	background-color: #5b89c6;
 }
+.top-main-contents {
+	margin: 0 100px;
+}
+
+
+
+
+/*new_video*/
+.new-video {
+	text-align: left;
+}
+.video-contents {
+	margin: 0 200px;
+}
+.new-title {
+	font-family: verdana;
+	font-size: 50px;
+}
+.new-video-title {
+	font-size: 20px;
+}
+.new-video-name {
+	font-size: 20px;
+}
+.new-video-button {
+	width:100px;
+	height: 50px;
+	color: orange;
+	background-color: white;
+}
+
+/*index_video*/
+.index-video {
+	width:100%;
+}
+
+
+
+/*show_video*/
+
+
+
+/*mypage*/
+.mypage{
+	width:100%;
+}.mypage-title {
+	font-size:30px;
+}
+.user-image {
+	height:250px;
+	width:250px;
+	border-radius: 50% 50%;
+}
+.user-name {
+	font-size:30px;
+}
+.mypage-contents {
+	margin:0 60px;
+}
+.mypage-text {
+	float:left;
+	margin:30px;
+	width:25%;
+}
+.mypage-history {
+	background-color: white;
+	float:left;
+	margin:30px;
+	width:65%;
+}
+
+
+
+
+
+
+

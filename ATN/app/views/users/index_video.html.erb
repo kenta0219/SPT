@@ -1,0 +1,13 @@
+<div class="index-video">
+	<div class="space"></div>
+	<div class="index-video-contents">
+		<div class="index-video-text">
+			<% @videos.each do |video|%>
+				<%= video.video_name %>
+				動画表示
+			<% end %>
+			<%= link_to 'show', show_video_path %>
+			ここはジャンル縛りで表示　ZFTのitenlistと同じ
+		</div>
+	</div>
+</div>

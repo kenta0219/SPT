@@ -12,12 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require material_icons
  */
 
+
 body {
-	background-color: #275faa;
+	background-color: #c6c9d3;
+	margin:0;
 }
 .space {
-	height:70px;
-	background-color: #b3c3d8;
+	height:85px;
 }
