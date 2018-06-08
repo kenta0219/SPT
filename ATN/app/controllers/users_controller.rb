@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	# video
 	def top_video
 	end
 
@@ -27,23 +28,41 @@ class UsersController < ApplicationController
 	def update_video
 	end
 
+	def delete_video
+	end
+
+	# confirm_video
+	def confirm_video
+		@video = Video.new(video_params)
+		@video.save
+		redirect_to new_video_path
+	end
 
 
+
+
+	# mypage
 	def mypage
 
 	end
 
-	# def edit_user
-	# 	@user = User.find(params[:id])
-	# end
-
-	def create_user
+	def edit_user
+		@user = User.find(params[:id])
 	end
 
-	def destroy_user
+	def create_user
+		@user = User.find(params[:id])
+		@user.save
+		redirect_to user_mypage_path(current_user.id)
+	end
+
+	def delete_user
 	end
 
 	def update_user
+		@user = User.find(params[:id])
+		@user.updatea(user_params)
+		redirect_to user_mypage_path(current_user.id)
 	end
 end
 
@@ -54,6 +73,6 @@ private
 	end
 
 	def user_params
-	  params.require(:user).permit(:name, :email, :image)
+	  params.require(:user).permit(:name, :email, :image, :password, :favorite_sports)
 	end
 

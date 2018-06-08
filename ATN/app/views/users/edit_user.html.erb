@@ -2,5 +2,15 @@
 	<div class="space"></div>
 	<div class="mypage-edit-contents">
 		<h1>MyPage Edit</h1>
+		<%= form_for current_user, url: update_user_path do |f| %>
+			<%= attachment_field :image %>
+			<%= f.text_field :name %>
+			<%= f.text_field :email %>
+			<%= f.password_field :password_confirmation, autocomplete: "off" %>
+			<%= f.submit "変更" %>
+		<% end %>
+		<%= link_to destroy_user_session_path, method: :delete do %>
+				<i class="material-icons user-nav-icon">close</i>
+		<% end %>
 	</div>
 </div>

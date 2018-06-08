@@ -1,13 +1,20 @@
+<%= render 'users/video_header' %>
+
 <div class="mypage">
 	<div class="space"></div>
 	<div class="mypage-contents clearfix">
 		<div class="mypage-title">MyPage</div>
 			<div class="mypage-text clearfix">
 				<div class="user-image">画像</div>
-				<div class="user-name">name</div>
-				<div class="user-email">email</div>
-				<div class="user-favorite-sports">お気に入り</div>
-					<%= link_to 'edit', edit_user_path %>
+				<div class="user-name"><%= current_user.name %></div>
+					<div class="under clearfix"></div>
+				<div class="user-email"><%= current_user.email %></div>
+					<div class="under clearfix"></div>
+				<div class="user-edit-button">
+					<%= link_to edit_user_path(current_user.id) do %>
+						<div class="material-icons edit-nav-icon">edit</div>編集
+					<% end %>
+				</div>
 			</div>
 
 			<div class="mypage-history clearfix">

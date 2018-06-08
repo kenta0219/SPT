@@ -1,0 +1,39 @@
+<%= render 'admins/ad_header' %>
+
+<div class="admin-ad">
+	<div class="space"></div>
+	<div class="admin-contents clearfix">
+		<div class="admin-title">Members</div>
+			<div class="admin-text clearfix">
+				<table table="table table-hover table-inverse">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+						</tr>
+					</thead>
+
+					<tbody>
+					<% @admins.each do |admin| %>
+						<tr>
+							<td><%= admin.name %></td>
+							<td><%= admin.email %></td>
+							<td><%= link_to "Edit", admin_edit_path(admin) %>
+								<%= link_to "Destroy", admin_delete_path(admin),method: :delete, data: {
+									confirm: "Are you sure to delete?"} %>
+							</td>
+						</tr>
+					<% end %>
+					</tbody>
+				</table>
+
+			</div>
+	</div>
+</div>
+
+
+
+
+
+
+

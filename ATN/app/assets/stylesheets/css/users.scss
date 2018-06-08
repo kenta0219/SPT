@@ -3,7 +3,12 @@
 header {
 	width:100%;
 }
-
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
 /*Log_in,sign_up*/
 .login-page {
 	width:100%;
@@ -29,11 +34,10 @@ header {
 }
 
 
-/*top_item*/
+/*user_header*/
 .header-menu {
 	width:100%;
 	height:70px;
-	background-color: white;
 	position:absolute;
 
 }
@@ -45,19 +49,38 @@ header {
 	padding:10px;
 }
 .site-name {
-	padding:10px;
+	padding:15px 10px 10px 30px;
 	float:left;
 	width: 30%;
 	font-size:30px;
 }
+.site-name:hover {
+	color:orange;
+}
+.sports-site {
+	width:120px;
+	color:black;
+}
+.sports-site:hover {
+	color:orange;
+}
 .user-nav-icon {
-	display:inline-block;
 	padding:10px 20px;
 	font-size: 50px;
+	display:inline-block;
+	color: black;
 }
+.user-nav-icon:hover {
+	color: orange;
+}
+
+
+/*top_video*/
 .top-video {
 	background-color: #878a8e;
 	width:100%;
+	background-image: url('/images/031.jpg');
+	background-size: cover;
 }
 .top-main-field {
 	width:100%;
@@ -67,18 +90,19 @@ header {
 	height:500px;
 	width:100%;
 }
-
-
-
 .top-main-visual {
 	height:200px;
 	width:100%;
-	background-color: #5b89c6;
 }
 .top-main-contents {
 	margin: 0 100px;
 }
 
+.pick-up-video {
+	font-size: 25px;
+	font-family: serif;
+	color: white;
+}
 
 
 
@@ -121,15 +145,38 @@ header {
 .mypage{
 	width:100%;
 }.mypage-title {
-	font-size:30px;
+	font-size:50px;
+	font-family: verdana;
+}
+.mypage-text {
+	border: solid 1px #7a7b7c;
+	padding: 20px;
 }
 .user-image {
 	height:250px;
 	width:250px;
 	border-radius: 50% 50%;
+	margin:0 auto;
 }
 .user-name {
+	margin:30px;
 	font-size:30px;
+	text-align: center;
+	font-family: serif;
+}
+.user-email {
+	margin:10px;
+	font-size:20px;
+	font-family:serif;
+}
+.user-edit-button {
+	display:block;
+	text-align: center;
+	margin:5px;
+	font-size: 20px;
+}
+.under {
+	border: solid 1px #7a7b7c;
 }
 .mypage-contents {
 	margin:0 60px;
@@ -143,7 +190,7 @@ header {
 	background-color: white;
 	float:left;
 	margin:30px;
-	width:65%;
+	width:60%;
 }
 
 

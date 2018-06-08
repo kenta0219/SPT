@@ -1,34 +1,4 @@
-<header>
-	<div class="header-menu clearfix">
-		<div class="site-name">
-			<%= link_to top_ad_path do %>
-				サイト名
-			<% end %>
-		</div>
-		<div class="header-nav-box clearfix">
-		ログインにより表示変更
-			<%= link_to index_ad_path do %>
-				 <i class="material-icons user-nav-icon">list</i>
-			<% end %>
-
-			<% if user_signed_in? %>
-				<%= link_to user_mypage_path do %>
-					a
-				<% end %>
-				<%= link_to destroy_user_session_path, method: :delete do %>
-					a
-				<% end %>
-			<% else %>
-				<%= link_to new_admin_registration_path do %>
-					<i class="material-icons user-nav-icon">open_in_new</i>
-				<% end %>
-				<%= link_to new_admin_session_path do %>
-					log_in
-				<% end %>
-			<% end %>
-		</div>
-	</div>
-</header>
+<%= render 'admins/ad_header' %>
 
 <div class="top-video-ad">
 <div class="space"></div>
@@ -36,8 +6,7 @@
 		<div class="top-main-field-ad clearfix">
 			<div class="top-image-field-ad">
 				<div class="top-image-text-ad clearfix">
-				写真入れたい
-				写真のうえに文字
+					if文で表示をわける
 				</div>
 
 
@@ -49,7 +18,11 @@
 			</div>
 		</div>
 		<div class="top-main-visual-ad">
-			<h1>通報された動画</h1>
+			<div class="report-video">
+				<h1>通報された動画</h1>
+				<h4>詳細はないので削除ボタンの表示動画のみではなく、名前、プロフィール画像の表示。</h4>
+			</div>
 		</div>
 	</div>
 </div>
+

@@ -1,37 +1,31 @@
 
-
-
 <header>
 	<div class="header-menu clearfix">
+		<div class="site-name clearfix">
+			<%= link_to top_video_path do %>
+				<div class="sports-site clearfix">サイト名</div>
+			<% end %>
+		</div>
 		<div class="header-nav-box clearfix">
+		<% if user_signed_in? %>
 			<%= link_to index_video_path do %>
-				 <i class="material-icons">list</i>
+				 <span class="material-icons user-nav-icon">search</span>
 			<% end %>
 			<%= link_to new_video_path do %>
-				<i class="material-icons">add_circle_outline</i>
+				<span class="material-icons user-nav-icon">add_circle_outline</span>
 			<% end %>
 			<%= link_to user_mypage_path do %>
-				<i class="material-icons">account_circle</i>
+				<span class="material-icons user-nav-icon">account_circle</span>
 			<% end %>
+		<% else %>
+			<%= link_to new_user_registration_path do %>
+				<span class="material-icons user-nav-icon">person_add</span>
+			<% end %>
+			<%= link_to new_user_session_path do %>
+				<span class="material-icons user-nav-icon">input</span>
+			<% end %>
+		<% end %>
 
-			<% if user_signed_in? %>
-				<%= link_to user_video_cart_path do %>
-					a
-				<% end %>
-				<%= link_to user_mypage_path do %>
-					a
-				<% end %>
-				<%= link_to destroy_user_session_path, method: :delete do %>
-					a
-				<% end %>
-			<% else %>
-				<%= link_to new_user_registration_path do %>
-					<i class="material-icons">open_in_new</i>
-				<% end %>
-				<%= link_to new_user_session_path do %>
-					log_in
-				<% end %>
-			<% end %>
 		</div>
 	</div>
 </header>

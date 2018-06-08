@@ -8,7 +8,7 @@ def after_sign_in_path_for(resource)
 	when Admin
 		top_ad_path
 	when User
-		top_item_path
+		top_video_path
 	end
 end
 def after_sign_out_path_for(resource_or_scope)

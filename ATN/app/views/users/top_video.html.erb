@@ -1,44 +1,6 @@
 <%= render 'users/video_header' %>
 
 
-<header>
-	<div class="header-menu clearfix">
-		<div class="site-name clearfix">
-			<%= link_to top_video_path do %>
-				サイト名
-			<% end %>
-		</div>
-		<div class="header-nav-box clearfix">
-		ログインにより表示変更
-			<%= link_to index_video_path do %>
-				 <span class="material-icons user-nav-icon">search</span>
-			<% end %>
-			<%= link_to new_video_path do %>
-				<i class="material-icons user-nav-icon">add_circle_outline</i>
-			<% end %>
-			<%= link_to user_mypage_path do %>
-				<i class="material-icons user-nav-icon">account_circle</i>
-			<% end %>
-
-			<% if user_signed_in? %>
-				<%= link_to user_mypage_path do %>
-					a
-				<% end %>
-				<%= link_to destroy_user_session_path, method: :delete do %>
-					a
-				<% end %>
-			<% else %>
-				<%= link_to new_user_registration_path do %>
-					<i class="material-icons user-nav-icon">open_in_new</i>
-				<% end %>
-				<%= link_to new_user_session_path do %>
-					log_in
-				<% end %>
-			<% end %>
-		</div>
-	</div>
-</header>
-
 <div class="top-video">
 <div class="space"></div>
 	<div class="top-contents">
@@ -59,8 +21,7 @@
 		</div>
 		<div class="top-main-visual">
 			<div class="top-main-contents">
-				<h1>ピックアップ動画</h1>
-				<h3>お気に入りに登録したジャンルの動画表示</h3>
+				<div class="pick-up-video">ピックアップ動画 お気に入りに登録したジャンルの動画表示</div>
 			</div>
 		</div>
 	</div>
