@@ -56,15 +56,14 @@ class UsersController < ApplicationController
 		redirect_to user_mypage_path(current_user.id)
 	end
 
-	def delete_user
-	end
-
 	def update_user
 		@user = User.find(params[:id])
-		@user.updatea(user_params)
+		@user.update(user_params)
 		redirect_to user_mypage_path(current_user.id)
 	end
-end
+
+	def delete_user
+	end
 
 private
 
@@ -75,4 +74,6 @@ private
 	def user_params
 	  params.require(:user).permit(:name, :email, :image, :password, :favorite_sports)
 	end
+
+end
 

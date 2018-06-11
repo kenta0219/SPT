@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(version: 20180606040208) do
 
   create_table "videos", force: :cascade do |t|
     t.string "video_name"
+    t.string "video_information"
     t.text "video_id"
     t.string "user_id"
     t.datetime "created_at", null: false

@@ -9,6 +9,14 @@ a:hover {
 
 
 /*top_ad*/
+.top-video {
+	width:100%;
+}
+.top-image-field-ad {
+	min-height: 850px;
+	background-image: url('/images/033.jpg');
+	background-size: cover;
+}
 .top-main-visual-ad {
 	margin:0 100px;
 }
@@ -17,9 +25,8 @@ a:hover {
 /*ad_header*/
 .header-menu-ad {
 	width:100%;
-	height:70px;
+	height:100px;
 	position:absolute;
-	background-color: white;
 
 }
 .header-nav-box-ad {
@@ -29,20 +36,20 @@ a:hover {
 	width:60%;
 	padding:10px;
 }
-.admin-nav-icon {
+.material-icons.admin-nav-icon {
 	display:inline-block;
-	padding:10px 20px;
+	padding:15px 20px 15px 20px;
 	font-size: 50px;
 	color:black;
 }
-.admin-nav-icon:hover {
+.material-icons.admin-nav-icon:hover {
 	color:orange;
 }
 .site-name-ad {
-	padding:15px 10px 10px 30px;
+	padding:20px;
 	float:left;
 	width: 30%;
-	font-size:30px;
+	font-size:40px;
 }
 .sports-site {
 	width:120px;
@@ -53,6 +60,16 @@ a:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 /*admin_member_ad*/
 .admin-contents {
 	margin: 0 100px;
@@ -60,4 +77,25 @@ a:hover {
 .admin-title {
 	font-size: 50px;
 	font-family:verdana;
+	margin-bottom: 30px;
+}
+.admin-text {
+	margin:20px 60px;
+}
+.table-name {
+	font-size: 20px;
+	padding-right: 50px;
+}
+.table-email {
+	font-size: 20px;
+}
+.table-control {
+	font-size: 20px;
+	padding-left: 50px;
+}
+.table-name-ad {
+	font-size: 30px;
+}
+.table-edit {
+	padding-left: 50px;
 }

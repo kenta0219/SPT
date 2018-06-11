@@ -3,13 +3,15 @@
 <div class="index-video">
 	<div class="space"></div>
 	<div class="index-video-contents">
+		<div class="index-video-title">Video List</div>
 		<div class="index-video-text">
 			<% @videos.each do |video|%>
-				<%= video.video_name %>
-				動画表示
+				<div class="new-video">動画表示</div>
+				<div class="new-video-name"><%= video.video_name %></div>
+				<div class="new-video-information"><%= video.video_information %></div>
 			<% end %>
 			<%= link_to 'show', show_video_path %>
-			ここはジャンル縛りで表示　ZFTのitenlistと同じ
+			ここはジャンル縛りで表示　ZFTのitemlistと同じ
 		</div>
 	</div>
 </div>

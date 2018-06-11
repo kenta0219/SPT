@@ -37,7 +37,7 @@ a:hover {
 /*user_header*/
 .header-menu {
 	width:100%;
-	height:70px;
+	height:100px;
 	position:absolute;
 
 }
@@ -49,38 +49,41 @@ a:hover {
 	padding:10px;
 }
 .site-name {
-	padding:15px 10px 10px 30px;
+	padding:20px;
 	float:left;
 	width: 30%;
-	font-size:30px;
+	font-size:40px;
 }
 .site-name:hover {
 	color:orange;
 }
 .sports-site {
-	width:120px;
+	width:160px;
 	color:black;
+	margin-left: 50px;
 }
 .sports-site:hover {
 	color:orange;
 }
-.user-nav-icon {
-	padding:10px 20px;
-	font-size: 50px;
+.material-icons.user-nav-icon {
+	padding:15px 20px 15px 20px;
 	display:inline-block;
 	color: black;
+	font-size: 50px;
 }
-.user-nav-icon:hover {
+.material-icons.user-nav-icon:hover {
 	color: orange;
 }
 
 
 /*top_video*/
 .top-video {
-	background-color: #878a8e;
 	width:100%;
-	background-image: url('/images/031.jpg');
+}
+.top-video-head {
+	background-image: url('/images/033.jpg');
 	background-size: cover;
+	min-height: 850px;
 }
 .top-main-field {
 	width:100%;
@@ -97,31 +100,49 @@ a:hover {
 .top-main-contents {
 	margin: 0 100px;
 }
-
 .pick-up-video {
-	font-size: 25px;
-	font-family: serif;
-	color: white;
+	font-size: 50px;
+	font-family: verdana;
+	text-align:center;
+	color: #606363;
+	margin-top: 30px;
 }
+.material-icons.pick-up-icon {
+	font-size: 40px;
+}
+
 
 
 
 /*new_video*/
 .new-video {
-	text-align: left;
+	background-image: url('/images/023.jpg');
+	background-size: cover;
+	height:900px;
 }
 .video-contents {
-	margin: 0 200px;
+	margin:200px 200px 0 200px;
+	text-align:left;
 }
 .new-title {
 	font-family: verdana;
 	font-size: 50px;
+	color:white;
+}
+.new-video-text {
+	margin: 5px 0 0 20px;
 }
 .new-video-title {
 	font-size: 20px;
+	color:white;
 }
 .new-video-name {
 	font-size: 20px;
+	color:white;
+}
+.new-video-information {
+	font-size: 20px;
+	color:white;
 }
 .new-video-button {
 	width:100px;
@@ -134,6 +155,13 @@ a:hover {
 .index-video {
 	width:100%;
 }
+.index-video-contents {
+	margin:0 150px;
+}
+.index-video-title {
+	font-size: 50px;
+	font-family: verdana;
+}
 
 
 
@@ -142,11 +170,17 @@ a:hover {
 
 
 /*mypage*/
-.mypage{
+.mypage {
 	width:100%;
-}.mypage-title {
+	background-image: url('/images/028.jpg');
+	background-size: cover;
+	min-height: 900px;
+}
+.mypage-title {
 	font-size:50px;
 	font-family: verdana;
+	text-align:left;
+	margin:0 30px;
 }
 .mypage-text {
 	border: solid 1px #7a7b7c;
@@ -156,7 +190,7 @@ a:hover {
 	height:250px;
 	width:250px;
 	border-radius: 50% 50%;
-	margin:0 auto;
+	margin:30px auto;
 }
 .user-name {
 	margin:30px;
@@ -184,17 +218,80 @@ a:hover {
 .mypage-text {
 	float:left;
 	margin:30px;
-	width:25%;
+	width:30%;
+	background-color:white;
 }
 .mypage-history {
-	background-color: white;
 	float:left;
 	margin:30px;
-	width:60%;
+	width:55%;
+}
+.mypage-history-title {
+	font-size: 40px;
+	font-family:verdana;
+}
+.mypage-history-contents {
+	background-color: white;
+}
+.material-icons.edit-nav-icon {
+	color: black;
+	font-size: 40px;
+}
+.material-icons.edit-nav-icon:hover {
+	color: orange;
 }
 
 
+/*edit_user*/
+.mypage-edit-contents {
+	margin: 0 120px;
+}
 
+.mypage-edit-title {
+	font-size: 50px;
+	font-family: verdana;
+}
+.mypage-edit-text {
+	margin:20px;
+	width:45%;
+	float:left;
+}
+.edit-image {
+	font-size: 30px
+}
+.edit-name {
+	font-size: 30px;
+}
+.edit-email {
+	font-size: 30px;
+}
+.edit-password {
+	font-size: 30px;
+}
+.mypage-edit-button {
+	width: 150px;
+}
+.mypage-edit-button:hover {
+	opacity: 0.6;
+}
+.edit-button-user {
+	padding:10px;
+}
+.logout-button-user {
+	color: #a966f4;
+	width: 160px;
+}
+.logout-button-user:hover {
+	color:orange;
+}
+.mypage-edit-post {
+	float:left;
+	margin:0 auto;
+}
+.edit-post-title {
+	font-size: 40px;
+	font-family: verdana;
+}
 
 
 

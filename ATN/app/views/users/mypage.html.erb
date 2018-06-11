@@ -1,24 +1,30 @@
 <%= render 'users/video_header' %>
 
+
 <div class="mypage">
 	<div class="space"></div>
-	<div class="mypage-contents clearfix">
-		<div class="mypage-title">MyPage</div>
-			<div class="mypage-text clearfix">
-				<div class="user-image">画像</div>
-				<div class="user-name"><%= current_user.name %></div>
-					<div class="under clearfix"></div>
-				<div class="user-email"><%= current_user.email %></div>
-					<div class="under clearfix"></div>
-				<div class="user-edit-button">
-					<%= link_to edit_user_path(current_user.id) do %>
-						<div class="material-icons edit-nav-icon">edit</div>編集
-					<% end %>
+		<div class="mypage-contents clearfix">
+			<div class="mypage-title">MyPage</div>
+				<div class="mypage-text clearfix">
+					<div class="user-image"><%= attachment_image_tag current_user, :image, :fill, 300, 300, format: 'jpeg', class: "profile-img-responsive pull-left image", fallback: "036.jpg",size: '250x250' %></div>
+					<div class="user-name"><%= current_user.name %></div>
+						<div class="under clearfix"></div>
+					<div class="user-email"><%= current_user.email %></div>
+						<div class="under clearfix"></div>
+					<div class="user-edit-button">
+						<%= link_to edit_user_path(current_user.id) do %>
+							<div class="material-icons edit-nav-icon">edit</div>
+						<% end %>
+					</div>
 				</div>
-			</div>
 
-			<div class="mypage-history clearfix">
-				閲覧履歴か自分があげた動画
-			</div>
-	</div>
+				<div class="mypage-history clearfix">
+					<div class="mypage-history-title">
+						Browsing History
+					</div>
+					<div class="mypage-history-contents">
+						閲覧履歴一覧
+					</div>
+				</div>
+		</div>
 </div>

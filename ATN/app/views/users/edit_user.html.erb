@@ -1,16 +1,28 @@
+<%= render 'users/video_header' %>
+
+
 <div class="mypage-edit">
 	<div class="space"></div>
-	<div class="mypage-edit-contents">
-		<h1>MyPage Edit</h1>
-		<%= form_for current_user, url: update_user_path do |f| %>
-			<%= attachment_field :image %>
-			<%= f.text_field :name %>
-			<%= f.text_field :email %>
-			<%= f.password_field :password_confirmation, autocomplete: "off" %>
-			<%= f.submit "変更" %>
-		<% end %>
-		<%= link_to destroy_user_session_path, method: :delete do %>
-				<i class="material-icons user-nav-icon">close</i>
-		<% end %>
+	<div class="mypage-edit-contents clearfix">
+		<div class="mypage-edit-title">MyPage Edit</div>
+			<div class="mypage-edit-text clearfix">
+				<%= form_for current_user, url: update_user_path do |f| %>
+					<div class="edit-image">＜Profile Image＞<%= f.attachment_field :image %></div><br>
+					<div class="edit-name">＜Name＞<%= f.text_field :name %></div><br>
+					<div class="edit-email">＜Email＞<%= f.text_field :email %></div><br>
+					<div class="edit-password">＜Password＞<%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+					<div class="edit-button-user"><%= f.submit "Edit", class: "mypage-edit-button" %></div>
+				<% end %>
+				<br><%= link_to destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} do %>
+						<div class="logout-button-user">＜Delete Account＞</div>
+				<% end %>
+			</div>
+
+			<div class="mypage-edit-post clearfix">
+				<div class="edit-post-title">
+					My Post List
+					<h6>自分で上げた動画</h6>
+				</div>
+			</div>
 	</div>
 </div>

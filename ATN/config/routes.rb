@@ -14,12 +14,12 @@ Rails.application.routes.draw do
 
   #admin
   get 'admin' => 'admins#top_ad', as: 'top_ad'
-  get 'admin/index' => 'admins#index_ad', as: 'index_ad'
-  get 'admin/member' => 'admins#admin_ad', as: 'admin_ad'
-  get 'admin/member/:id/edit' => 'admins#admin_edit', as: 'edit_admin'
-  post 'admin/member/create' => 'admins#admin_create', as: 'create_admin'
-  patch 'admin/member/:id/update' => 'admins#admin_update', as: 'update_admin'
-  delete 'admin/member/:id/delete' => 'admins#admin_delete', as: 'delete_admin'
+  get 'admin/show' => 'admins#show_ad', as: 'show_ad'
+  get 'admin/page' => 'admins#admin_ad', as: 'admin_ad'
+  get 'admin//:id/edit' => 'admins#admin_edit', as: 'edit_admin'
+  post 'admin//create' => 'admins#admin_create', as: 'create_admin'
+  patch 'admin//:id/update' => 'admins#admin_update', as: 'update_admin'
+  delete 'admin//:id/delete' => 'admins#admin_delete', as: 'delete_admin'
 
   get 'admin/tag/merger' => 'admins#tag_merger', as: 'tag_merger'
 
@@ -37,7 +37,7 @@ Rails.application.routes.draw do
 
 
   get 'mypage' => 'users#mypage', as: 'user_mypage'
-  get 'user/edit' => 'users#edit_user', as: 'edit_user'
+  get 'user/:id/edit' => 'users#edit_user', as: 'edit_user'
   patch 'user/:id/update' => 'users#update_user', as: 'update_user'
   post 'user/create' => 'users#create_user', as: 'create_user'
   delete 'user/:id/delete' => 'users#delete_user', as: 'delete_user'

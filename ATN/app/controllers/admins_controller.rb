@@ -1,10 +1,9 @@
 class AdminsController < ApplicationController
 
 	def top_ad
-		
 	end
 
-	def index_ad
+	def show_ad
 		
 	end
 
@@ -13,7 +12,7 @@ class AdminsController < ApplicationController
 	end
 
 	def admin_edit
-		
+		@admin = Admin.find(params[:id])
 	end
 
 	def admin_update
@@ -29,5 +28,27 @@ class AdminsController < ApplicationController
 
 	def tag_merger
 		
+	end
+
+	def create_tag
+		
+	end
+
+	def update_tag
+		
+	end
+
+	def delete_tag
+		
+	end
+
+
+
+
+
+
+private
+	def admin_params
+		params.require(:admin).permit(:name, :email, :password)
 	end
 end

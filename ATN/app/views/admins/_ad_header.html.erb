@@ -8,17 +8,14 @@
 
 		<div class="header-nav-box-ad clearfix">
 			<% if admin_signed_in? %>
-				<%= link_to index_ad_path do %>
-					<i class="material-icons admin-nav-icon">list</i>
-				<% end %>
 				<%= link_to admin_ad_path do %>
-					<i class="material-icons admin-nav-icon">account_circle</i>
+					<i class="material-icons admin-nav-icon">people</i>
 				<% end %>
 				<%= link_to tag_merger_path do %>
 					<i class="material-icons admin-nav-icon">menu</i>
 				<% end %>
 				<%= link_to destroy_admin_session_path, method: :delete do %>
-					<i class="material-icons admin-nav-icon">close</i>
+					<i class="material-icons admin-nav-icon">person_outline</i>
 				<% end %>
 			<% else %>
 				<%= link_to new_admin_registration_path do %>

@@ -4,14 +4,18 @@
 	<div class="space"></div>
 	<div class="space"></div>
 	<div class="video-contents">
-		<div class="new-title">動画をシェアする</div>
-		<%= form_for(@video, url: create_video_path) do |f| %>
-			<div class="new-video-title">動画タイトル</div>
-			<%= f.text_field :video_name %>
-			<div class="new-video-name">ビデオID</div>
-			<%= f.attachment_field :video %><br><br>
-			<%= f.submit 'Share', class: "new-video-button" %>
-		<% end %>
+		<div class="new-title">Share Video</div>
+			<div class="new-video-text">
+				<%= form_for(@video, url: create_video_path) do |f| %>
+					<div class="new-video-title">Video Title</div>
+					<%= f.text_field :video_name %><br><br>
+					<div class="new-video-name">Video ID</div>
+					<%= f.attachment_field :video %><br><br>
+					<div class="new-video-information">Video Information</div>
+					<%= f.text_area :video_information %><br><br>
+					<%= f.submit 'Share', class: "new-video-button" %>
+				<% end %>
+			</div>
 	</div>
 
 	<div class="video-confirmation">
