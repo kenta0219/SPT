@@ -19,8 +19,8 @@
 						<tr>
 							<td class="table-name-ad"><%= admin.name %></td>
 							<td class="table-email-ad"><%= admin.email %></td>
-							<td class="table-edit"><%= link_to "Edit", edit_admin_path(admin) %></td>
-							<td><%= link_to "Destroy", delete_admin_path(admin),method: :delete, data: {
+							<td class="table-edit"><%= button_to "Edit", edit_admin_path(admin) %></td>
+							<td><%= button_to "Destroy", delete_admin_path(admin),method: :delete, data: {
 									confirm: "Are you sure to delete?"} %></td>
 						</tr>
 					<% end %>

@@ -16,7 +16,9 @@ class AdminsController < ApplicationController
 	end
 
 	def admin_update
-		
+		@admin = Admin.find(params[:id])
+		@admin.update(admin_params)
+		redirect_to admin_ad_path(current_admin.id)
 	end
 
 	def admin_delete

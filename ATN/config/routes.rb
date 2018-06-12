@@ -16,10 +16,10 @@ Rails.application.routes.draw do
   get 'admin' => 'admins#top_ad', as: 'top_ad'
   get 'admin/show' => 'admins#show_ad', as: 'show_ad'
   get 'admin/page' => 'admins#admin_ad', as: 'admin_ad'
-  get 'admin//:id/edit' => 'admins#admin_edit', as: 'edit_admin'
-  post 'admin//create' => 'admins#admin_create', as: 'create_admin'
-  patch 'admin//:id/update' => 'admins#admin_update', as: 'update_admin'
-  delete 'admin//:id/delete' => 'admins#admin_delete', as: 'delete_admin'
+  post 'admin/:id/edit' => 'admins#admin_edit', as: 'edit_admin'
+  post 'admin/create' => 'admins#admin_create', as: 'create_admin'
+  patch 'admin/:id/update' => 'admins#admin_update', as: 'update_admin'
+  delete 'admin/:id/delete' => 'admins#admin_delete', as: 'delete_admin'
 
   get 'admin/tag/merger' => 'admins#tag_merger', as: 'tag_merger'
 

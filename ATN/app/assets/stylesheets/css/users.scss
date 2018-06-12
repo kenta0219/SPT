@@ -72,8 +72,20 @@ a:hover {
 	font-size: 50px;
 }
 .material-icons.user-nav-icon:hover {
-	color: orange;
+	opacity: 0.2;
 }
+.header-mypage {
+	padding: 15px 20px 0 20px;
+}
+.profile-img-responsive-header {
+	margin:0 auto;
+	border-radius: 50% 50%;
+	margin:0 0 3px 10px;
+}
+.profile-img-responsive-header:hover {
+	opacity: 0.2;
+}
+
 
 
 /*top_video*/
@@ -89,12 +101,13 @@ a:hover {
 	width:100%;
 	height:700px;
 }
-.top-image-field {
-	height:500px;
-	width:100%;
+.top-image-text {
+	margin:50px 100px 0 100px;
+	font-family: verdana;
+	font-size: 100px;
+	color: white;
 }
 .top-main-visual {
-	height:200px;
 	width:100%;
 }
 .top-main-contents {
@@ -108,7 +121,7 @@ a:hover {
 	margin-top: 30px;
 }
 .material-icons.pick-up-icon {
-	font-size: 40px;
+	font-size: 30px;
 }
 
 
@@ -116,7 +129,7 @@ a:hover {
 
 /*new_video*/
 .new-video {
-	background-image: url('/images/023.jpg');
+	background-image: url('/images/037.jpg');
 	background-size: cover;
 	height:900px;
 }
@@ -150,6 +163,11 @@ a:hover {
 	color: orange;
 	background-color: white;
 }
+.material-icons.new-video-icon {
+	font-size: 30px;
+}
+
+
 
 /*index_video*/
 .index-video {
@@ -162,6 +180,9 @@ a:hover {
 	font-size: 50px;
 	font-family: verdana;
 }
+.material-icons.index-video-icon {
+	font-size:30px;
+}
 
 
 
@@ -172,7 +193,7 @@ a:hover {
 /*mypage*/
 .mypage {
 	width:100%;
-	background-image: url('/images/028.jpg');
+	background-image: url('/images/024.jpg');
 	background-size: cover;
 	min-height: 900px;
 }
@@ -183,30 +204,36 @@ a:hover {
 	margin:0 30px;
 }
 .mypage-text {
-	border: solid 1px #7a7b7c;
 	padding: 20px;
+	margin:30px;
+	width:30%;
+	float:left;
+/*	background-color: #d5d5d5;*/
 }
 .user-image {
 	height:250px;
 	width:250px;
-	border-radius: 50% 50%;
 	margin:30px auto;
 }
+.profile-img-responsive {
+	border-radius: 50% 50%;
+}
 .user-name {
-	margin:30px;
+	margin:10px;
 	font-size:30px;
 	text-align: center;
-	font-family: serif;
+	font-family: verdana;
 }
 .user-email {
 	margin:10px;
 	font-size:20px;
-	font-family:serif;
+	font-family:verdana;
+	text-align: center;
 }
 .user-edit-button {
 	display:block;
 	text-align: center;
-	margin:5px;
+	margin-top:5px;
 	font-size: 20px;
 }
 .under {
@@ -214,12 +241,6 @@ a:hover {
 }
 .mypage-contents {
 	margin:0 60px;
-}
-.mypage-text {
-	float:left;
-	margin:30px;
-	width:30%;
-	background-color:white;
 }
 .mypage-history {
 	float:left;

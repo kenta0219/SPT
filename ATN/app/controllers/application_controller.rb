@@ -15,7 +15,7 @@ def after_sign_out_path_for(resource_or_scope)
 	if resource_or_scope == :admin
 		top_ad_path
 	else
-		top_item_path
+		top_video_path
 	end
 end
 
