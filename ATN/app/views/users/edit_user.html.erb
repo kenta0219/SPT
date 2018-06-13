@@ -4,12 +4,12 @@
 <div class="mypage-edit">
 	<div class="space"></div>
 	<div class="mypage-edit-contents clearfix">
-		<div class="mypage-edit-title">MyPage Edit</div>
+		<div class="mypage-edit-title">Account Edit</div>
 			<div class="mypage-edit-text clearfix">
 				<%= form_for current_user, url: update_user_path do |f| %>
 					<div class="edit-image">＜Profile Image＞<%= f.attachment_field :image %></div><br>
 					<div class="edit-name">＜Name＞<%= f.text_field :name %></div><br>
-					<div class="edit-email">＜Email＞<%= f.text_field :email %></div><br>
+					<div class="edit-email">＜Email＞<%= f.email_field :email %></div><br>
 					<div class="edit-password">＜Password＞<%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 					<div class="edit-button-user"><%= f.submit "Edit", class: "mypage-edit-button" %></div>
 				<% end %>

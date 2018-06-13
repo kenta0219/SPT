@@ -1,0 +1,18 @@
+<%= render 'admins/ad_header' %>
+
+<div class="new-tag">
+	<div class="space"></div>
+	<div class="new-tag-contents">
+		<div class="new-tag-title">Add Tag</div>
+			<div class="new-tag-text">
+				<%= form_for @tag, url: tag_create_path do |t| %>
+					<div class="new-tag-name">＜New Tag Name＞<%= t.text_field :tag_name %></div><br>
+					<div class="new-tag-button"><%= t.submit 'Add', class: "tag-new-button" %></div>
+				<% end %>
+			</div>
+	</div>
+</div>
+
+
+
+

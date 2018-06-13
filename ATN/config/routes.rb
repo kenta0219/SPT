@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   devise_for :views
   devise_for :admins, controllers: {
   	sessions:      'admin/sessions',
@@ -12,16 +13,32 @@ Rails.application.routes.draw do
   }
 
 
+  #carrierwave
+  get 'article/new' => 'articles#article_new', as: 'article_new'
+  get 'article/index' => 'articles#article_index', as: 'article_index'
+  get 'article/show' => 'articles#article_show', as: 'article_show'
+  get 'article/:id/edit' => 'articles#article_edit', as: 'article_edit'
+
+
+
+
+
   #admin
   get 'admin' => 'admins#top_ad', as: 'top_ad'
   get 'admin/show' => 'admins#show_ad', as: 'show_ad'
   get 'admin/page' => 'admins#admin_ad', as: 'admin_ad'
-  post 'admin/:id/edit' => 'admins#admin_edit', as: 'edit_admin'
+  get 'admin/:id/edit' => 'admins#edit_admin', as: 'admin_edit'
   post 'admin/create' => 'admins#admin_create', as: 'create_admin'
   patch 'admin/:id/update' => 'admins#admin_update', as: 'update_admin'
   delete 'admin/:id/delete' => 'admins#admin_delete', as: 'delete_admin'
 
-  get 'admin/tag/merger' => 'admins#tag_merger', as: 'tag_merger'
+  get 'admin/tag/new' => 'admins#new_tag', as: 'new_tag'
+  get 'admin/tag/index' => 'admins#index_tag', as: 'index_tag'
+  post 'admin/tag/create' => 'admins#create_tag', as: 'tag_create'
+
+
+
+
 
 
   #user

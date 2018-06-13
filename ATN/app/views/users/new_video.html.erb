@@ -13,12 +13,15 @@
 					<%= f.attachment_field :video %><br><br>
 					<div class="new-video-information">Video Information</div>
 					<%= f.text_area :video_information %><br><br>
+					<%= f.hidden_field :user_id, value: current_user.id %>
 					<%= f.submit 'Share', class: "new-video-button" %>
 				<% end %>
 			</div>
 	</div>
 
 	<div class="video-confirmation">
-		＋α  動画投稿前に確認用でフォームと選択された動画を表示できるようにする。　右側
+		＋α  動画投稿前に確認用でフォームと選択された動画を表示できるようにする。 右側
 	</div>
 </div>
+
+

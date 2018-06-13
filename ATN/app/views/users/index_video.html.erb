@@ -4,14 +4,17 @@
 	<div class="space"></div>
 	<div class="index-video-contents">
 		<div class="index-video-title"><i class="material-icons index-video-icon">ondemand_video</i> Video List <i class="material-icons index-video-icon">ondemand_video</i></div>
-		<div class="index-video-text">
-			<% @videos.each do |video|%>
-				<div class="new-video">動画表示</div>
-				<div class="new-video-name"><%= video.video_name %></div>
-				<div class="new-video-information"><%= video.video_information %></div>
-			<% end %>
-			<%= link_to 'show', show_video_path %>
-			ここはジャンル縛りで表示　ZFTのitemlistと同じ
-		</div>
+		<% @videos.each do |video|%>
+			<div class="index-video-text clearfix">
+				<div class="index-video-film"></div><br>
+				<%= link_to show_video_path(video) do %>
+					<div class="index-video-status">
+						<div class="index-video-name">【<%= video.video_name %>】</div><br>
+						<div class="index-video-information"><%= video.video_information %></div>
+					</div>
+				<% end %>
+				<%= current_user.name %>
+			</div>
+		<% end %>
 	</div>
 </div>

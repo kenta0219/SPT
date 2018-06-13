@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
+
+
 	# video
 	def top_video
 	end
 
 	def new_video
 		@video = Video.new
+		@tags = Tag.all
 	end
 
 	def index_video
@@ -13,6 +16,7 @@ class UsersController < ApplicationController
 
 	def show_video
 		@video = Video.find(params[:id])
+		@user = User.find_by(id: @video.user_id)
 	end
 
 	# def edit_item
@@ -21,6 +25,10 @@ class UsersController < ApplicationController
 
 	def create_video
 		@video = Video.new(video_params)
+		@video = Video.new(
+		    content: params[:content],
+		    user_id: current_user.id
+		)
 		@video.save
 		redirect_to index_video_path
 	end
@@ -68,11 +76,15 @@ class UsersController < ApplicationController
 private
 
 	def video_params
-	  params.require(:video).permit(:video_name, :video_id)
+	  params.require(:video).permit(:video_name, :video_id, :user_id)
 	end
 
 	def user_params
 	  params.require(:user).permit(:name, :email, :image, :password, :favorite_sports)
+	end
+
+	def tag_params
+		params.require(:tag).permit(:tag_name)
 	end
 
 end

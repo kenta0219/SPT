@@ -2,14 +2,15 @@
 
 <div class="edit_admin">
 	<div class="space"></div>
-
-
-
-
-
-
-
-
-
-
+	<div class="edit-admin-contents">
+	<div class="edit-admin-title">Member Edit</div>
+		<div class="edit-admin-text">
+			<%= form_for current_admin, url: update_admin_path do |admin| %>
+				<div class="edit-admin-name">＜Edit Name＞<%= admin.text_field :name %></div><br>
+				<div class="edit-admin-email">＜Edit Email＞<%= admin.email_field :email %></div><br>
+				<div class="edit-admin-password">＜Edit Password＞<%= admin.password_field :password %></div><br>
+				<div class="edit-admin-button"><%= admin.submit 'Edit', class: "admin-edit-button" %></div>
+			<% end %>
+		</div>
+	</div>
 </div>

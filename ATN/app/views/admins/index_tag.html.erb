@@ -1,0 +1,13 @@
+<%= render 'admins/ad_header' %>
+
+<div class="index-tag">
+	<div class="space"></div>
+	<div class="index-tag-contents">
+		<div class="index-tag-title">Tag List</div>
+			<% @tags.each do |tag| %>
+				<div class="index-tag-text">
+					・<%= tag.tag_name %>
+				</div>
+			<% end %>
+	</div>
+</div>
