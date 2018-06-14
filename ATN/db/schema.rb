@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 20180613090519) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.string "video"
+    t.string "user_name"
+    t.string "tag_name"
+    t.text "video_information"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

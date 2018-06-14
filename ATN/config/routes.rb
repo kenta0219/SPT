@@ -13,11 +13,15 @@ Rails.application.routes.draw do
   }
 
 
-  #carrierwave
-  get 'article/new' => 'articles#article_new', as: 'article_new'
-  get 'article/index' => 'articles#article_index', as: 'article_index'
-  get 'article/show' => 'articles#article_show', as: 'article_show'
+  #article
+  get '/' => 'articles#top_video', as: 'top_video'
+  get 'article/index' => 'articles#index_video', as: 'index_video'
+  get 'new' => 'articles#new_video', as: 'new_video'
+  get 'article/:id' => 'articles#show_video', as: 'show_video'
+
+
   get 'article/:id/edit' => 'articles#article_edit', as: 'article_edit'
+  post 'article/create' => 'articles#create', as: 'article_create'
 
 
 
@@ -43,10 +47,7 @@ Rails.application.routes.draw do
 
   #user
 
-  get '/' => 'users#top_video', as: 'top_video'
-  get 'new' => 'users#new_video', as: 'new_video'
-  get 'video/index' => 'users#index_video', as: 'index_video'
-  get 'video/show' => 'users#show_video', as: 'show_video'
+
   get 'video/:id/edit' => 'users#edit_video', as: 'edit_video'
   post 'video/create' => 'users#create_video', as: 'create_video'
   patch 'video/:id/update' => 'users#update_video', as: 'update_video'

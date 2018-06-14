@@ -1,20 +1,25 @@
 class ArticlesController < ApplicationController
 
+  def top_video
+  end
+
 
   # GET /articles
   # GET /articles.json
-  def article_index
+  def index_video
     @articles = Article.all
   end
 
   # GET /articles/1
   # GET /articles/1.json
-  def article_show
+  def show_video
+    @article = Article.find(params[:id])
   end
 
   # GET /articles/new
-  def article_new
+  def new_video
     @article = Article.new
+    @tags = Tag.all
   end
 
   # GET /articles/1/edit
@@ -25,23 +30,15 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render :show, status: :created, location: @article }
-      else
-        format.html { render :new }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
-    end
+    @article.save
+    redirect_to index_video_path
   end
 
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
     respond_to do |format|
-      if @article.update(article_params)
+      if @article.update(article_params) && @article.video.recreate_versions!
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
         format.json { render :show, status: :ok, location: @article }
       else
@@ -69,6 +66,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :video)
+      params.require(:article).permit(:title, :video, :video_information)
     end
 end

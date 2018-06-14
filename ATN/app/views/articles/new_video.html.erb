@@ -1,0 +1,42 @@
+<%= render 'users/video_header' %>
+
+
+<div class="new-video">
+	<div class="space"></div>
+	<div class="space"></div>
+		<div class="video-contents">
+			<div class="new-title">
+				<i class="material-icons new-video-icon">share</i> Share Video <i class="material-icons new-video-icon">share</i>
+			</div>
+			<div class="new-video-text">
+				<%= form_with(model: @article, local: true) do |f| %>
+				  <% if @article.errors.any? %>
+				    <div id="error_explanation">
+				      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+				      <ul>
+				      <% @article.errors.full_messages.each do |message| %>
+				        <li><%= message %></li>
+				      <% end %>
+				      </ul>
+				    </div>
+				  <% end %>
+
+				  <div class="new-video-title">Video Title</div>
+				    <%= f.text_field :title, id: :article_title %>
+
+				  <div class="new-video-name">Video ID</div>
+				    <div class="new-video-field">
+				    	<%= f.file_field :video, :accept => 'video/*' %>
+				    </div>
+
+				  <div class="new-video-information">Video Information</div>
+					<%= f.text_area :video_information %><br><br>
+					
+					<%= f.submit 'Share', class: "new-video-button" %>
+				<% end %>
+			</div>
+		</div>
+</div>
+
+

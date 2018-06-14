@@ -4,4 +4,6 @@ class Video < ApplicationRecord
 	has_many :tag_merger
 
 	attachment :video
+
+	mount_uploader :video, VideoUploader
 end

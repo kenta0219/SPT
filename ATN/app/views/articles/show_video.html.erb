@@ -1,0 +1,20 @@
+<%= render 'users/video_header' %>
+
+<div class="show-video">
+	<div class="space"></div>
+		<div class="show-video-contents clearfix">
+		 	<div class="show-video-film">
+				<%= link_to @article.video_url.to_s do %>
+					<%= image_tag(@article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+				<% end %>
+			</div>
+
+			<div class="show-video-title">
+				【　<%= @article.title %> 】
+			</div><br>
+
+			<div class="show-video-information">
+				<%= @article.video_information %>
+			</div>
+		</div>
+</div>
