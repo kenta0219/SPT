@@ -19,9 +19,29 @@
 			</div>
 
 			<div class="mypage-edit-post clearfix">
-				<div class="edit-post-title">
-					My Post List
-					<h6>自分で上げた動画</h6>
+				<div class="edit-post-contents">
+					<div class="edit-post-title">My Post List</div>
+					<% @articles.each do |article| %>
+			            <div class="edit-video-text clearfix">
+			                <%= link_to show_video_path(article) do %>
+			                    <div class="edit-video-name">【<%= article.title %>】</div>
+			                <% end %>
+			                    <div class="edit-video-tag">
+			                      <% if article.tag %>
+			                        <%= article.tag.tag_name %>
+			                      <% end %>
+			                    </div>
+			                    <div class="edit-video-information"><%= article.video_information %></div>
+		                    		<%= link_to delete_article_path (article) ,method: :delete, data: {confirm: 'Are you sure you want to delete contents?'} do %>
+		                    			<div class="edit-video-destroy">＜Delete Contents＞</div>
+		                    		<% end %>
+			                    	<div class="edit-video-film clearfix">
+			                    		<%= link_to article.video_url.to_s do %>
+				                			<%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+				                		<% end %>
+				                	</div>
+			            </div>
+			        <% end %>
 				</div>
 			</div>
 	</div>

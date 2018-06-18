@@ -3,8 +3,8 @@ class CreateArticles < ActiveRecord::Migration[5.1]
     create_table :articles do |t|
       t.string :title
       t.string :video
-      t.string :user_name
-      t.string :tag_name
+      t.references :user
+      t.references :tag
       t.text :video_information
 
 

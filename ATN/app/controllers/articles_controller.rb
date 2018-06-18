@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 
   def top_video
+      @articles = Article.all.reverse
   end
 
 
@@ -19,7 +20,6 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new_video
     @article = Article.new
-    @tags = Tag.all
   end
 
   # GET /articles/1/edit
@@ -30,7 +30,9 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
+    @article.user_id = current_user.id
     @article.save
+    logger.debug @article.errors.inspect
     redirect_to index_video_path
   end
 
@@ -66,6 +68,8 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :video, :video_information)
+      params.require(:article).permit(:title, :video, :video_information, :tag_id, :user_id)
     end
+
+
 end

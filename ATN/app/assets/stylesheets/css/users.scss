@@ -160,6 +160,35 @@ a:hover {
 	color: #606363;
 	margin-top: 30px;
 }
+.top-video-text {
+	margin:40px 0 40px 0;
+}
+.top-video-contents {
+	text-align:center;
+}
+.top-video-name {
+	font-size: 40px;
+	color: black;
+	margin-right: 250px;
+}
+.top-video-name:hover {
+	color: #11549b;
+}
+.top-video-tag {
+	font-size: 20px;
+	margin-left: 400px;
+}
+.top-video-information {
+	color:#7a7a7c;
+	padding: 20px;
+	width:40%;
+	margin:0 auto;
+}
+.top-video-user {
+	width:40%;
+	margin:0 auto;
+	text-align:right;
+}
 .material-icons.pick-up-icon {
 	font-size: 30px;
 }
@@ -169,12 +198,13 @@ a:hover {
 
 /*new_video*/
 .new-video {
-	background-image: url('/images/037.jpg');
+	background-image: url('/images/038.jpg');
 	background-size: cover;
 	height:900px;
+	width:100%;
 }
 .video-contents {
-	margin:200px 200px 0 200px;
+	margin:150px 200px 0 200px;
 	text-align:left;
 }
 .new-title {
@@ -188,24 +218,26 @@ a:hover {
 .new-video-title {
 	font-size: 20px;
 	color:white;
+	margin-top:20px;
 }
 .new-video-name {
 	font-size: 20px;
 	color:white;
-}
-.new-video-field {
-	background-color: white;
-	width:220px;
+	margin-top: 30px;
 }
 .new-video-information {
 	font-size: 20px;
 	color:white;
+	margin-top:30px;
 }
 .new-video-button {
 	width:100px;
 	height: 50px;
 	color: orange;
 	background-color: white;
+}
+.new-video-tag-field {
+	margin-top:30px;
 }
 .material-icons.new-video-icon {
 	font-size: 30px;
@@ -305,7 +337,6 @@ a:hover {
 
 .show-video {
 	width:100%;
-	text-align: center;
 	background-image: url('/images/042.jpg');
 	background-size: cover;
 	min-height:900px;
@@ -334,6 +365,11 @@ a:hover {
 	margin-top: 10px;
 	color: gray;
 }
+.show-video-tag {
+	color:white;
+	font-size: 30px;
+	text-align: right;
+}
 
 
 
@@ -345,7 +381,7 @@ a:hover {
 /*mypage*/
 .mypage {
 	width:100%;
-	background-image: url('/images/024.jpg');
+	background-image: url('/images/040.jpg');
 	background-size: cover;
 	min-height: 900px;
 }
@@ -464,7 +500,41 @@ a:hover {
 .edit-post-title {
 	font-size: 40px;
 	font-family: verdana;
+	margin:10px;
+	text-align:center;
 }
+.edit-video-text {
+	background-color: #ccced1;
+	margin-top: 20px;
+}
+.edit-video-name {
+	font-size: 30px;
+	text-align: center;
+	color:#11549b;
+}
+.edit-video-tag {
+	text-align: right;
+	padding-right:10px;
+}
+.edit-video-information {
+	padding:10px;
+	font-size: 10px;
+	color:#7a7a7c;
+}
+.edit-video-film {
+	margin:10px;
+}
+.edit-video-destroy {
+	text-align: right;
+	padding-right:10px;
+}
+
+
+
+
+
+
+
 
 
 

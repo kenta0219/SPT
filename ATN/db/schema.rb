@@ -33,11 +33,13 @@ ActiveRecord::Schema.define(version: 20180613090519) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.string "video"
-    t.string "user_name"
-    t.string "tag_name"
+    t.integer "user_id"
+    t.integer "tag_id"
     t.text "video_information"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["tag_id"], name: "index_articles_on_tag_id"
+    t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -59,11 +61,9 @@ ActiveRecord::Schema.define(version: 20180613090519) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.integer "tag_name_id"
     t.string "tag_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["tag_name_id"], name: "index_tags_on_tag_name_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 20180613090519) do
   create_table "video_mergers", force: :cascade do |t|
     t.integer "user_id"
     t.integer "video_id"
+    t.string "tag_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_video_mergers_on_user_id"

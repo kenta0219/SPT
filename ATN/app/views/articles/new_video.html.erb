@@ -3,7 +3,6 @@
 
 <div class="new-video">
 	<div class="space"></div>
-	<div class="space"></div>
 		<div class="video-contents">
 			<div class="new-title">
 				<i class="material-icons new-video-icon">share</i> Share Video <i class="material-icons new-video-icon">share</i>
@@ -22,16 +21,27 @@
 				    </div>
 				  <% end %>
 
-				  <div class="new-video-title">Video Title</div>
-				    <%= f.text_field :title, id: :article_title %>
 
-				  <div class="new-video-name">Video ID</div>
-				    <div class="new-video-field">
-				    	<%= f.file_field :video, :accept => 'video/*' %>
-				    </div>
+					<div class="new-video-title">Video Title</div>
+				    	<%= f.text_field :title, id: :article_title %>
 
-				  <div class="new-video-information">Video Information</div>
-					<%= f.text_area :video_information %><br><br>
+					<div class="new-video-name">Video ID</div>
+					    <div class="new-video-field">
+					    	<%= f.file_field :video, :accept => 'video/*' %>
+					    </div>
+
+
+					<div class="new-video-tag">
+						<div class="new-video-tag-field">
+							 <%= f.collection_radio_buttons( :tag_id, Tag.all, :id, :tag_name ) do |tag| %>
+							 	<%= tag.label {tag.radio_button + tag.text} %>
+							 <% end %>
+						</div>
+					</div>
+
+
+					<div class="new-video-information">Video Information</div>
+						<%= f.text_area :video_information %><br><br>
 
 
 					<%= f.submit 'Share', class: "new-video-button" %>

@@ -59,5 +59,6 @@ Rails.application.routes.draw do
   patch 'user/:id/update' => 'users#update_user', as: 'update_user'
   post 'user/create' => 'users#create_user', as: 'create_user'
   delete 'user/:id/delete' => 'users#delete_user', as: 'delete_user'
+  delete 'user/:id/delete/article' => 'users#delete_article', as: 'delete_article'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

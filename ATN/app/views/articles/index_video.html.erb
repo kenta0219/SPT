@@ -15,8 +15,15 @@
                 <%= link_to show_video_path(article) do %>
                     <div class="index-video-name">【<%= article.title %>】</div>
                 <% end %>
-                    <div class="index-video-tag">ジャンル</div>
+                    <div class="index-video-tag">
+                      <% if article.tag %>
+                        <%= article.tag.tag_name %>
+                      <% end %>
+                    </div>
                     <div class="index-video-information"><%= article.video_information %></div>
+                      <% if article.user %>
+                        <%= article.user.name %>
+                      <% end %>
             </div>
         <% end %>
     </div>

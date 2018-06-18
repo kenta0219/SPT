@@ -35,8 +35,18 @@
 					【 <%= @article.title %> 】
 				</div><br>
 
+				<div class="show-video-tag">
+					<% if @article.tag %>
+                    	<%= @article.tag.tag_name %>
+                    <% end %>
+				</div>
+
 				<div class="show-video-information">
 					<%= @article.video_information %>
+				</div>
+
+				<div class="admin-add-button">
+
 				</div>
 			</div>
 		</div>
