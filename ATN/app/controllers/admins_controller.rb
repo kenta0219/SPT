@@ -1,6 +1,7 @@
 class AdminsController < ApplicationController
 
 	def top_ad
+		@articles = Article.all
 	end
 
 	def show_ad

@@ -10,11 +10,25 @@
 				</div>
 			</div>
 	</div>
-			<div class="top-main-visual">
-				<div class="top-main-contents">
-					<div class="pick-up-video"><i class="material-icons pick-up-icon">live_tv</i> Pick Up Video <i class="material-icons pick-up-icon">live_tv</i></div>
+		<div class="top-main-visual">
+			<div class="top-main-contents">
+				<div class="pick-up-video"><i class="material-icons pick-up-icon">live_tv</i> Pick Up Video <i class="material-icons pick-up-icon">live_tv</i></div>
 
-					<% @articles.each do |article| %>
+				<div class="top-contents clearfix">
+					<%
+						display_articles = []
+
+						articles_len = @articles.length
+
+						iiii = 0
+
+						while iiii < articles_len && iiii < 3 do
+							display_articles.push(@articles[iiii])
+							iiii += 1
+						end
+
+					%>
+					<% display_articles.each do |article| %>
 			            <div class="top-video-text clearfix">
 			            	<div class="top-video-contents clearfix">
 				                <%= link_to show_video_path(article) do %>
@@ -25,18 +39,19 @@
 				               		</div>
 				               		<div class="top-video-tag">
 			                    		<% if article.tag %>
-			                    			<%= article.tag.tag_name %>
+			                    			＜<%= article.tag.tag_name %>＞
 			                    		<% end %>
 			                    	</div>
 				            </div>
-		               		<div class="top-video-information"><%= article.video_information %></div>
-		               			<div class="top-video-user">
+				            <div class="top-video-user">
 		                    		<% if article.user %>
-		                    			<%= article.user.name %>
+		                    			@ <%= article.user.name %>
 		                   			<% end %>
 		                   		</div>
+		               		<div class="top-video-information"><%= article.video_information %></div>
 			            </div>
 	        		<% end %>
-				</div>
+	        	</div>
 			</div>
+		</div>
 </div>

@@ -5,29 +5,24 @@ class ArticlesController < ApplicationController
   end
 
 
-  # GET /articles
-  # GET /articles.json
+
   def index_video
     @articles = Article.all
+    @tags = Tag.all
   end
 
-  # GET /articles/1
-  # GET /articles/1.json
+
   def show_video
     @article = Article.find(params[:id])
+    @post_comment = PostComment.new
   end
 
-  # GET /articles/new
+
   def new_video
     @article = Article.new
   end
 
-  # GET /articles/1/edit
-  def article_edit
-  end
 
-  # POST /articles
-  # POST /articles.json
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
@@ -36,8 +31,7 @@ class ArticlesController < ApplicationController
     redirect_to index_video_path
   end
 
-  # PATCH/PUT /articles/1
-  # PATCH/PUT /articles/1.json
+
   def update
     respond_to do |format|
       if @article.update(article_params) && @article.video.recreate_versions!
@@ -50,23 +44,20 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # DELETE /articles/1
-  # DELETE /articles/1.json
+
   def destroy
+    @article = Article.find(params[:id])
     @article.destroy
-    respond_to do |format|
-      format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to edit_user_path(current_user.id)
   end
 
+
+
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:title, :video, :video_information, :tag_id, :user_id)
     end

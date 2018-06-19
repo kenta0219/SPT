@@ -1,0 +1,45 @@
+<div class="show-video clearfix">
+	<div class="space"></div>
+		<div class="show-video-contents clearfix">
+		 	<div class="show-video-film clearfix">
+				<%= link_to @article.video_url.to_s do %>
+					<%= image_tag(@article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+				<% end %>
+			</div>
+
+
+			<div class="show-video-text clearfix">
+				<div class="show-video-title">
+					【 <%= @article.title %> 】
+				</div><br>
+
+				<div class="show-video-tag">
+					<% if @article.tag %>
+                    	<%= @article.tag.tag_name %>
+                    <% end %>
+				</div>
+
+				<div class="show-video-information">
+					<%= @article.video_information %>
+				</div>
+
+				<div class="admin-add-button">
+
+				</div>
+
+
+
+			  	<div class="comment-delete-title">Delete Comment：</div>
+			  	<div class="show-comment-text">
+				    <% @article.post_comments.each do |comment| %>
+				    	<h4><%= comment.from %> さん</h4>
+					   	 <div><%= comment.body %></div>
+					    <div class="comment-delete">[<%= link_to 'コメントを削除する', [@article, comment], method: :delete ,data: {confirm: 'Are you sure?'} %>]</div>
+				    <% end %>
+				</div>
+
+
+
+			</div>
+		</div>
+</div>

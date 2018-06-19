@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   }
 
 
+
   #article
   get '/' => 'articles#top_video', as: 'top_video'
   get 'article/index' => 'articles#index_video', as: 'index_video'
@@ -22,6 +23,12 @@ Rails.application.routes.draw do
 
   get 'article/:id/edit' => 'articles#article_edit', as: 'article_edit'
   post 'article/create' => 'articles#create', as: 'article_create'
+
+
+  resources :articles do
+    resources :post_comments, only: [:create, :destroy]
+  end
+
 
 
 
@@ -51,7 +58,6 @@ Rails.application.routes.draw do
   get 'video/:id/edit' => 'users#edit_video', as: 'edit_video'
   post 'video/create' => 'users#create_video', as: 'create_video'
   patch 'video/:id/update' => 'users#update_video', as: 'update_video'
-  delete 'video/:id/delete' => 'users#delete_video', as: 'delete_video'
 
 
   get 'mypage' => 'users#mypage', as: 'user_mypage'
@@ -59,6 +65,8 @@ Rails.application.routes.draw do
   patch 'user/:id/update' => 'users#update_user', as: 'update_user'
   post 'user/create' => 'users#create_user', as: 'create_user'
   delete 'user/:id/delete' => 'users#delete_user', as: 'delete_user'
-  delete 'user/:id/delete/article' => 'users#delete_article', as: 'delete_article'
+  get 'user/:id/delete/article' => 'articles#destroy', as: 'destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
+

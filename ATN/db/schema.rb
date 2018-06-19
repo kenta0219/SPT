@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180613090519) do
+ActiveRecord::Schema.define(version: 20180619054018) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -42,13 +42,12 @@ ActiveRecord::Schema.define(version: 20180613090519) do
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
-  create_table "comments", force: :cascade do |t|
+  create_table "post_comments", force: :cascade do |t|
+    t.text "comment"
     t.integer "user_id"
-    t.integer "post_comment_id"
+    t.integer "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_comment_id"], name: "index_comments_on_post_comment_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "tag_mergers", force: :cascade do |t|

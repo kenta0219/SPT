@@ -31,13 +31,12 @@
 					    </div>
 
 
-					<div class="new-video-tag">
+					<div class="new-video-tag-title">Tag Select</div>
 						<div class="new-video-tag-field">
 							 <%= f.collection_radio_buttons( :tag_id, Tag.all, :id, :tag_name ) do |tag| %>
 							 	<%= tag.label {tag.radio_button + tag.text} %>
 							 <% end %>
 						</div>
-					</div>
 
 
 					<div class="new-video-information">Video Information</div>

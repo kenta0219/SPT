@@ -4,12 +4,23 @@
 
 <div class="index-video">
   <div class="space"></div>
-    <div class="index-video-contents">
-      <div class="index-video-title"><i class="material-icons index-video-icon">ondemand_video</i> Video List <i class="material-icons index-video-icon">ondemand_video</i>
-      </div>
+    <div class="index-video-top">
+        <div class="index-video-title clearfix">
+          <i class="material-icons index-video-icon">ondemand_video</i> Video List <i class="material-icons index-video-icon">ondemand_video</i>
+        </div>
+
+          <div class="index-video-tag-menu clearfix">
+            <% @tags.each do |tag| %>
+              <span class="index-video-tag-name">
+                <%= tag.tag_name %>
+              </span>
+            <% end %>
+          </div>
+    </div>
+    <div class="index-video-contents clearfix">
         <% @articles.each do |article| %>
-            <div class="index-video-text clearfix">
-                <div class="index-video-film clearfix">
+            <div class="index-video-text">
+                <div class="index-video-film">
                   <%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
                 </div><br>
                 <%= link_to show_video_path(article) do %>
@@ -17,12 +28,12 @@
                 <% end %>
                     <div class="index-video-tag">
                       <% if article.tag %>
-                        <%= article.tag.tag_name %>
+                        ＜<%= article.tag.tag_name %>＞
                       <% end %>
                     </div>
                     <div class="index-video-information"><%= article.video_information %></div>
                       <% if article.user %>
-                        <%= article.user.name %>
+                        @ <%= article.user.name %>
                       <% end %>
             </div>
         <% end %>

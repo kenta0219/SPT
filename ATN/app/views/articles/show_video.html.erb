@@ -7,7 +7,7 @@
 		</div>
 		<div class="show-header-nav-box clearfix">
 			<%= link_to index_video_path do %>
-				 <span class="material-icons show-nav-icon">search</span>
+				 <span class="material-icons show-nav-icon">menu</span>
 			<% end %>
 			<%= link_to new_video_path do %>
 				<span class="material-icons show-nav-icon">add_circle_outline</span>
@@ -25,10 +25,26 @@
 	<div class="space"></div>
 		<div class="show-video-contents clearfix">
 		 	<div class="show-video-film clearfix">
-				<%= link_to @article.video_url.to_s do %>
-					<%= image_tag(@article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
-				<% end %>
+		 		<div class="show-video-play">
+					<%= link_to @article.video_url.to_s do %>
+						<i class="material-icons play-button">play_arrow</i>
+					<% end %>
+				</div>
+				<div class="show-video-movie">
+						<%= image_tag(@article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+				</div>
+				<div class="comment-list-contents">
+				  	<div class="comment-list-title">Comment List：</div>
+					    <% @article.post_comments.each do |comment| %>
+						    <div class="show-comment-text">
+						    	<div class="commentator-name"><%= comment.user_id %> さん</div>
+							   	<div class="commentator-comment"><%= comment.comment %></div>
+							    <div class="border"></div>
+							</div>
+					    <% end %>
+				</div>
 			</div>
+
 
 			<div class="show-video-text clearfix">
 				<div class="show-video-title">
@@ -37,7 +53,7 @@
 
 				<div class="show-video-tag">
 					<% if @article.tag %>
-                    	<%= @article.tag.tag_name %>
+                    	＜<%= @article.tag.tag_name %>＞
                     <% end %>
 				</div>
 
@@ -45,9 +61,31 @@
 					<%= @article.video_information %>
 				</div>
 
+				<div class="show-video-poster-name">
+					<% if @article.user %>
+            			@ <%= @article.user.name %>
+           			<% end %>
+				</div>
+
 				<div class="admin-add-button">
 
 				</div>
+
+				<div class="comment-title">Post Comment：</div>
+				<div class="show-video-comment">
+					<%= form_for ([@article, @post_comment]) do |f| %>
+					    <div class="row">
+					        <div class="col-sm-12">
+					            <%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "Comments are here" %>
+					        </div>
+					    </div>
+					    <%= f.submit "Post", class: "post-comment-button" %>
+					<% end %>
+				</div>
+
+				<div class="inform-button">＜For Informed Video＞</div>
+
 			</div>
 		</div>
 </div>
+

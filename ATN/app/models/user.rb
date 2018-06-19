@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   attachment :image
 
-  has_many :comment
+  has_many :post_comments, dependent: :destroy
   has_many :video_merger
   has_many :articles
 

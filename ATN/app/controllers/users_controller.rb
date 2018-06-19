@@ -2,16 +2,6 @@ class UsersController < ApplicationController
 
 
 
-	# confirm_video
-	def confirm_video
-		@video = Video.new(video_params)
-		@video.save
-		redirect_to new_video_path
-	end
-
-
-
-
 	# mypage
 	def mypage
 	end
@@ -34,6 +24,9 @@ class UsersController < ApplicationController
 	end
 
 	def delete_user
+		@user = User.find(params[:id])
+		@user.destroy
+		redirect_to top_video_path
 	end
 
 

@@ -1,3 +1,10 @@
+html,body {
+	height:100%;
+}
+
+
+
+
 /*article*/
 pre {
   background-color: #eee;
@@ -169,7 +176,7 @@ a:hover {
 .top-video-name {
 	font-size: 40px;
 	color: black;
-	margin-right: 250px;
+	margin:0 250px 30px 0;
 }
 .top-video-name:hover {
 	color: #11549b;
@@ -178,16 +185,16 @@ a:hover {
 	font-size: 20px;
 	margin-left: 400px;
 }
-.top-video-information {
-	color:#7a7a7c;
-	padding: 20px;
-	width:40%;
-	margin:0 auto;
-}
 .top-video-user {
 	width:40%;
 	margin:0 auto;
-	text-align:right;
+	text-align:left;
+}
+.top-video-information {
+	color:#7a7a7c;
+	padding:10px 20px 0 20px;
+	width:40%;
+	margin:0 auto;
 }
 .material-icons.pick-up-icon {
 	font-size: 30px;
@@ -198,7 +205,7 @@ a:hover {
 
 /*new_video*/
 .new-video {
-	background-image: url('/images/038.jpg');
+	background-image: url('/images/040.jpg');
 	background-size: cover;
 	height:900px;
 	width:100%;
@@ -233,10 +240,17 @@ a:hover {
 .new-video-button {
 	width:100px;
 	height: 50px;
-	color: orange;
-	background-color: white;
+	color: black;
+}
+.new-video-button:hover {
+	opacity: 0.8;
 }
 .new-video-tag-field {
+	color:white;
+}
+.new-video-tag-title {
+	font-size: 20px;
+	color:white;
 	margin-top:30px;
 }
 .material-icons.new-video-icon {
@@ -249,14 +263,25 @@ a:hover {
 .index-video {
 	width:100%;
 }
+.index-video-top {
+	margin:0 100px;
+}
 .index-video-contents {
 	margin:0 150px;
 }
 .index-video-title {
 	font-size: 50px;
 	font-family: verdana;
-	margin-bottom: 50px;
-	text-align: center;
+	margin-left: 130px;
+}
+.index-video-tag-menu {
+	margin: 10px;
+}
+.index-video-tag-name {
+	font-size: 20px;
+	margin-left: 10px;
+	padding:5px;
+	background-color: #d5d5d5;
 }
 .index-video-text {
 	float:left;
@@ -362,13 +387,66 @@ a:hover {
 }
 .show-video-information {
 	font-size: 20px;
-	margin-top: 10px;
+	margin: 10px 0 10px 0;
 	color: gray;
+}
+.show-video-poster-name {
+	font-size: 20px;
+	color: #a2a4a5;
 }
 .show-video-tag {
 	color:white;
 	font-size: 30px;
 	text-align: right;
+}
+.comment-list-title {
+	color:white;
+	margin: 40px 0 20px 0;
+}
+.show-comment-text {
+	width: 80%;
+	margin:0 auto;
+}
+.commentator-name {
+	color:#d5d5d5;
+	margin-top:10px;
+	font-size: 10px
+}
+.commentator-comment {
+	color:#d5d5d5;
+	font-size: 25px;
+	padding:0 10px 0 10px;
+}
+.border {
+	border: solid 1px #d5d5d5;
+}
+
+.comment-title {
+	color:white;
+	margin-top: 50px;
+}
+.post-comment-button:hover {
+	opacity:0.8;
+}
+.inform-button {
+	color: #a966f4;
+	font-size: 20px;
+	width: 90%;
+	margin:0 auto;
+	text-align: center;
+}
+.show-video-play {
+	display:block;
+	position: absolute;
+}
+.material-icons.play-button {
+	opacity:0.6;
+	color:white;
+	font-size: 200px;
+	margin: 34px 156px;
+}
+.material-icons.play-button:hover {
+	opacity: 0.4;
 }
 
 
@@ -381,7 +459,7 @@ a:hover {
 /*mypage*/
 .mypage {
 	width:100%;
-	background-image: url('/images/040.jpg');
+	background-image: url('/images/031.jpg');
 	background-size: cover;
 	min-height: 900px;
 }
@@ -411,18 +489,27 @@ a:hover {
 	font-size:30px;
 	text-align: center;
 	font-family: verdana;
+	color:white;
 }
 .user-email {
 	margin:10px;
 	font-size:20px;
 	font-family:verdana;
 	text-align: center;
+	color:white;
 }
 .user-edit-button {
 	display:block;
 	text-align: center;
 	margin-top:5px;
 	font-size: 20px;
+}
+.material-icons.edit-nav-icon {
+	color: white;
+	font-size: 40px;
+}
+.material-icons.edit-nav-icon:hover {
+	color: orange;
 }
 .under {
 	border: solid 1px #7a7b7c;
@@ -442,13 +529,9 @@ a:hover {
 .mypage-history-contents {
 	background-color: white;
 }
-.material-icons.edit-nav-icon {
-	color: black;
-	font-size: 40px;
-}
-.material-icons.edit-nav-icon:hover {
-	color: orange;
-}
+
+
+
 
 
 /*edit_user*/
