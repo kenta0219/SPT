@@ -12,7 +12,7 @@
 	</div>
 		<div class="top-main-visual">
 			<div class="top-main-contents">
-				<div class="pick-up-video"><i class="material-icons pick-up-icon">live_tv</i> Pick Up Video <i class="material-icons pick-up-icon">live_tv</i></div>
+				<div class="pick-up-video"><i class="material-icons pick-up-icon">live_tv</i> New Video <i class="material-icons pick-up-icon">live_tv</i></div>
 
 				<div class="top-contents clearfix">
 					<%
@@ -45,7 +45,8 @@
 				            </div>
 				            <div class="top-video-user">
 		                    		<% if article.user %>
-		                    			@ <%= article.user.name %>
+		                    			<%= attachment_image_tag article.user, :image, :fill, 300, 300, format: 'jpeg', class: "profile-img-responsive pull-left image", fallback: "no-artist-image.jpg", size: "20x20" %>
+		                    			<%= article.user.name %>
 		                   			<% end %>
 		                   		</div>
 		               		<div class="top-video-information"><%= article.video_information %></div>

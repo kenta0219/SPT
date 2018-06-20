@@ -49,6 +49,7 @@ pre {
 /*user*/
 header {
 	width:100%;
+	position:fixed;
 }
 a:link {
     text-decoration: none;
@@ -142,6 +143,7 @@ a:hover {
 .top-video-head {
 	background-image: url('/images/033.jpg');
 	background-size: cover;
+	background-attachment: fixed;
 	min-height: 850px;
 }
 .top-main-field {
@@ -272,14 +274,14 @@ a:hover {
 .index-video-title {
 	font-size: 50px;
 	font-family: verdana;
-	margin-left: 130px;
+	margin: 0 0 30px 130px;
 }
 .index-video-tag-menu {
 	margin: 10px;
 }
 .index-video-tag-name {
-	font-size: 20px;
-	margin-left: 10px;
+	font-size: 10px;
+	margin-left: 20px;
 	padding:5px;
 	background-color: #d5d5d5;
 }
@@ -459,15 +461,13 @@ a:hover {
 /*mypage*/
 .mypage {
 	width:100%;
-	background-image: url('/images/031.jpg');
-	background-size: cover;
 	min-height: 900px;
 }
 .mypage-title {
 	font-size:50px;
 	font-family: verdana;
 	text-align:left;
-	margin:0 30px;
+	margin:0 30px 0 120px;
 }
 .mypage-text {
 	padding: 20px;
@@ -489,14 +489,12 @@ a:hover {
 	font-size:30px;
 	text-align: center;
 	font-family: verdana;
-	color:white;
 }
 .user-email {
 	margin:10px;
 	font-size:20px;
 	font-family:verdana;
 	text-align: center;
-	color:white;
 }
 .user-edit-button {
 	display:block;
@@ -505,7 +503,7 @@ a:hover {
 	font-size: 20px;
 }
 .material-icons.edit-nav-icon {
-	color: white;
+	color:black;
 	font-size: 40px;
 }
 .material-icons.edit-nav-icon:hover {
@@ -517,18 +515,52 @@ a:hover {
 .mypage-contents {
 	margin:0 60px;
 }
-.mypage-history {
+.mypage-edit-post {
 	float:left;
-	margin:30px;
-	width:55%;
+	margin: 90px 90px 20px 30px;
 }
-.mypage-history-title {
+.edit-post-title {
 	font-size: 40px;
-	font-family:verdana;
+	font-family: verdana;
+	margin:10px;
+	text-align:center;
 }
-.mypage-history-contents {
-	background-color: white;
+.edit-video-text {
+	background-color: #ccced1;
+	margin-top: 20px;
 }
+.edit-video-name {
+	font-size: 30px;
+	text-align: center;
+	color:black;
+}
+.edit-video-name:hover {
+	color:#11549b;
+}
+.edit-video-tag {
+	text-align: right;
+	padding-right:10px;
+}
+.edit-video-information {
+	padding:10px;
+	font-size: 10px;
+	color:#7a7a7c;
+}
+.edit-video-film {
+	margin:10px;
+}
+.edit-video-destroy {
+	text-align: right;
+	padding-right:10px;
+	color: #a966f4;
+}
+.edit-video-destroy:hover {
+	color:orange;
+}
+
+
+
+
 
 
 
@@ -536,16 +568,17 @@ a:hover {
 
 /*edit_user*/
 .mypage-edit-contents {
-	margin: 0 120px;
+	margin: 0 150px;
 }
 
 .mypage-edit-title {
 	font-size: 50px;
 	font-family: verdana;
+	margin-bottom: 30px;
 }
 .mypage-edit-text {
 	margin:20px;
-	width:45%;
+	width:60%;
 	float:left;
 }
 .edit-image {
@@ -575,41 +608,6 @@ a:hover {
 }
 .logout-button-user:hover {
 	color:orange;
-}
-.mypage-edit-post {
-	float:left;
-	margin:0 auto;
-}
-.edit-post-title {
-	font-size: 40px;
-	font-family: verdana;
-	margin:10px;
-	text-align:center;
-}
-.edit-video-text {
-	background-color: #ccced1;
-	margin-top: 20px;
-}
-.edit-video-name {
-	font-size: 30px;
-	text-align: center;
-	color:#11549b;
-}
-.edit-video-tag {
-	text-align: right;
-	padding-right:10px;
-}
-.edit-video-information {
-	padding:10px;
-	font-size: 10px;
-	color:#7a7a7c;
-}
-.edit-video-film {
-	margin:10px;
-}
-.edit-video-destroy {
-	text-align: right;
-	padding-right:10px;
 }
 
 

@@ -1,0 +1,3 @@
+class Ngvideo < ApplicationRecord
+
+end

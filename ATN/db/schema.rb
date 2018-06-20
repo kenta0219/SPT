@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180619054018) do
+ActiveRecord::Schema.define(version: 20180620083022) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -40,6 +40,11 @@ ActiveRecord::Schema.define(version: 20180619054018) do
     t.datetime "updated_at", null: false
     t.index ["tag_id"], name: "index_articles_on_tag_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "ngvideos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "post_comments", force: :cascade do |t|

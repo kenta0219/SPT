@@ -51,6 +51,18 @@ class AdminsController < ApplicationController
 		
 	end
 
+	def article_create
+		@article = Article.new
+		@article.save
+		redirect_to top_video_path
+	end
+
+	def destroy
+		@article = Article.find(params[:id])
+		@article.destroy
+		redirect_to top_ad_path
+	end
+
 
 
 

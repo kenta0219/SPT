@@ -33,11 +33,12 @@
                     </div>
                     <div class="index-video-information"><%= article.video_information %></div>
                       <% if article.user %>
-                        @ <%= article.user.name %>
+                        <%= attachment_image_tag article.user, :image, :fill, 300, 300, format: 'jpeg', class: "profile-img-responsive pull-left image", fallback: "no-artist-image.jpg", size: "20x20" %>
+                        <%= article.user.name %>
                       <% end %>
             </div>
         <% end %>
     </div>
 </div>
-
+<%= paginate @articles, class: "pagenate" %>
 

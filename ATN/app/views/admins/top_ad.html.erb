@@ -4,7 +4,9 @@
 	<div class="top-image-field-ad">
 		<div class="space"></div>
 		<div class="top-image-text-ad clearfix">
-			user側のトップページと同じ　背景が写真になる 動画一覧にする 動画から直接詳細画面へ
+			<div class="top-video-image cleafix">
+				sport
+			</div>
 		</div>
 
 
@@ -18,6 +20,7 @@
 		<div class="top-main-contents-ad">
 			<div class="pick-up-video-ad"><i class="material-icons pick-up-icon-ad">live_tv</i> Informed Video <i class="material-icons pick-up-icon-ad">live_tv</i></div>
 		</div>
+		<% if @article.present? %>
 			<% @articles.each do |article| %>
 	            <div class="top-video-text clearfix">
 	            	<div class="top-video-contents clearfix">
@@ -39,8 +42,15 @@
                     			@ <%= article.user.name %>
                    			<% end %>
                    		</div>
+
+                   	<div class="article-delete-button">
+
+                   	</div>
 	            </div>
     		<% end %>
+    	<% else %>
+
+    	<% end %>
 	</div>
 </div>
 

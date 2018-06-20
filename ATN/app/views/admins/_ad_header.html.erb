@@ -8,14 +8,14 @@
 
 		<div class="header-nav-box-ad clearfix">
 			<% if admin_signed_in? %>
-				<%= link_to admin_ad_path do %>
-					<i class="material-icons admin-nav-icon">people</i>
+				<%= link_to index_tag_path do %>
+					<i class="material-icons admin-nav-icon">menu</i>
 				<% end %>
 				<%= link_to new_tag_path do %>
 					<i class="material-icons admin-nav-icon">add_circle_outline</i>
 				<% end %>
-				<%= link_to index_tag_path do %>
-					<i class="material-icons admin-nav-icon">menu</i>
+				<%= link_to admin_ad_path do %>
+					<i class="material-icons admin-nav-icon">people</i>
 				<% end %>
 				<%= link_to destroy_admin_session_path, method: :delete do %>
 					<i class="material-icons admin-nav-icon">person_outline</i>

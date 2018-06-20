@@ -47,14 +47,15 @@ Rails.application.routes.draw do
   get 'admin/tag/index' => 'admins#index_tag', as: 'index_tag'
   post 'admin/tag/create' => 'admins#create_tag', as: 'tag_create'
 
+  get 'admin/article/create' => 'admins#article_create', as: 'article_create_ad'
+  delete 'admin/article/:id/delete' => 'admins#destroy', as: 'destroy_ad'
+
 
 
 
 
 
   #user
-
-
   get 'video/:id/edit' => 'users#edit_video', as: 'edit_video'
   post 'video/create' => 'users#create_video', as: 'create_video'
   patch 'video/:id/update' => 'users#update_video', as: 'update_video'
@@ -65,7 +66,7 @@ Rails.application.routes.draw do
   patch 'user/:id/update' => 'users#update_user', as: 'update_user'
   post 'user/create' => 'users#create_user', as: 'create_user'
   delete 'user/:id/delete' => 'users#delete_user', as: 'delete_user'
-  get 'user/:id/delete/article' => 'articles#destroy', as: 'destroy'
+  delete 'user/:id/delete/article' => 'articles#destroy', as: 'destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 

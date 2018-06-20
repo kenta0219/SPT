@@ -4,11 +4,11 @@ class UsersController < ApplicationController
 
 	# mypage
 	def mypage
+		@articles = current_user.articles.all
 	end
 
 	def edit_user
 		@user = User.find(params[:id])
-		@articles = current_user.articles.all
 	end
 
 	def create_user
@@ -33,13 +33,17 @@ class UsersController < ApplicationController
 	def delete_article
 		@article = Article.find(params[:id])
 		@article.destroy
-		redirect_to edit_user_path(current_user.id)
+		redirect_to mypage_path(current_user.id)
 	end
 
 private
 
 	def tag_params
 		params.require(:tag).permit(:tag_name)
+	end
+
+	def user_params
+		params.require(:user).permit(:image, :name, :email, :password)
 	end
 
 end
