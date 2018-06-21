@@ -2,17 +2,14 @@
 	<div class="header-menu-ad clearfix">
 		<div class="site-name-ad">
 			<%= link_to top_ad_path do %>
-				<div class="sports-site">サイト名</div>
+				<div class="sports-site-ad">サイト名</div>
 			<% end %>
 		</div>
 
 		<div class="header-nav-box-ad clearfix">
 			<% if admin_signed_in? %>
-				<%= link_to index_tag_path do %>
-					<i class="material-icons admin-nav-icon">menu</i>
-				<% end %>
 				<%= link_to new_tag_path do %>
-					<i class="material-icons admin-nav-icon">add_circle_outline</i>
+					<i class="material-icons admin-nav-icon">menu</i>
 				<% end %>
 				<%= link_to admin_ad_path do %>
 					<i class="material-icons admin-nav-icon">people</i>

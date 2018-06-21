@@ -1,0 +1,28 @@
+<%= render 'users/video_header' %>
+
+<div class="space"></div>
+<div class="index-video-contents clearfix">
+        <% @articles.each do |article| %>
+            <div class="index-video-text">
+                <div class="index-video-film">
+                  <%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+                </div><br>
+                <%= link_to show_video_path(article) do %>
+                    <div class="index-video-name">【<%= article.title %>】</div>
+                <% end %>
+                    <div class="index-video-tag">
+                      <% if article.tag %>
+                        ＜<%= article.tag.tag_name %>＞
+                      <% end %>
+                    </div>
+                    <div class="index-video-information"><%= article.video_information %></div>
+                      <% if article.user %>
+                        <%= attachment_image_tag article.user, :image, :fill, 300, 300, format: 'jpeg', class: "profile-img-responsive pull-left image", fallback: "no-artist-image.jpg", size: "20x20" %>
+                        <%= article.user.name %>
+                      <% end %>
+            </div>
+        <% end %>
+    </div>
+</div>
+<%= paginate @articles, class: "pagenate" %>
+

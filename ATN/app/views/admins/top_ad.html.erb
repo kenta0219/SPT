@@ -20,13 +20,11 @@
 		<div class="top-main-contents-ad">
 			<div class="pick-up-video-ad"><i class="material-icons pick-up-icon-ad">live_tv</i> Informed Video <i class="material-icons pick-up-icon-ad">live_tv</i></div>
 		</div>
-		<% if @article.present? %>
-			<% @articles.each do |article| %>
+			<% @ngvideo.each do |ngvideo| %>
+			<% article = Article.find_by(id: ngvideo) %>
 	            <div class="top-video-text clearfix">
 	            	<div class="top-video-contents clearfix">
-		                <%= link_to show_video_path(article) do %>
 		                    <div class="top-video-name">【<%= article.title %>】</div>
-		                <% end %>
 	                    	<div class="top-video-film clearfix">
 		                  		<%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
 		               		</div>
@@ -44,13 +42,9 @@
                    		</div>
 
                    	<div class="article-delete-button">
-
                    	</div>
 	            </div>
     		<% end %>
-    	<% else %>
-
-    	<% end %>
 	</div>
 </div>
 

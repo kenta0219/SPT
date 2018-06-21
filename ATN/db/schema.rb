@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20180620083022) do
   end
 
   create_table "ngvideos", force: :cascade do |t|
+    t.string "user_id"
+    t.string "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

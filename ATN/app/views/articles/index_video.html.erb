@@ -8,15 +8,19 @@
         <div class="index-video-title clearfix">
           <i class="material-icons index-video-icon">ondemand_video</i> Video List <i class="material-icons index-video-icon">ondemand_video</i>
         </div>
-
-          <div class="index-video-tag-menu clearfix">
-            <% @tags.each do |tag| %>
-              <span class="index-video-tag-name">
-                <%= tag.tag_name %>
-              </span>
-            <% end %>
-          </div>
     </div>
+
+        <div class="index-video-tag-menu clearfix">
+          <div class="index-squeeze-title">Squeeze</div>
+            <% @tags.each do |tag| %>
+              <%= link_to index_video_path(tag) do %>
+                <div class="index-video-tag-name">
+                  # <%= tag.tag_name %>
+                </div>
+              <% end %>
+            <% end %>
+        </div>
+
     <div class="index-video-contents clearfix">
         <% @articles.each do |article| %>
             <div class="index-video-text">
@@ -34,7 +38,10 @@
                     <div class="index-video-information"><%= article.video_information %></div>
                       <% if article.user %>
                         <%= attachment_image_tag article.user, :image, :fill, 300, 300, format: 'jpeg', class: "profile-img-responsive pull-left image", fallback: "no-artist-image.jpg", size: "20x20" %>
-                        <%= article.user.name %>
+                        <%= article.user.name %><br>
+                        <span class="index-video-create">
+                          <%= article.created_at.strftime("%Y/%m/%d %H:%M") %>
+                        </span>
                       <% end %>
             </div>
         <% end %>

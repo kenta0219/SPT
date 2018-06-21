@@ -101,6 +101,7 @@ a:hover {
 	float:left;
 	width: 30%;
 	font-size:40px;
+	font-style: italic;
 }
 .site-name:hover {
 	color:orange;
@@ -168,6 +169,7 @@ a:hover {
 	text-align:center;
 	color: #606363;
 	margin-top: 30px;
+	font-style: italic;
 }
 .top-video-text {
 	margin:40px 0 40px 0;
@@ -200,6 +202,7 @@ a:hover {
 }
 .material-icons.pick-up-icon {
 	font-size: 30px;
+	font-style: italic;
 }
 
 
@@ -220,6 +223,7 @@ a:hover {
 	font-family: verdana;
 	font-size: 50px;
 	color:white;
+	font-style: italic;
 }
 .new-video-text {
 	margin: 5px 0 0 20px;
@@ -228,16 +232,19 @@ a:hover {
 	font-size: 20px;
 	color:white;
 	margin-top:20px;
+	font-style: italic;
 }
 .new-video-name {
 	font-size: 20px;
 	color:white;
 	margin-top: 30px;
+	font-style: italic;
 }
 .new-video-information {
 	font-size: 20px;
 	color:white;
 	margin-top:30px;
+	font-style: italic;
 }
 .new-video-button {
 	width:100px;
@@ -254,9 +261,11 @@ a:hover {
 	font-size: 20px;
 	color:white;
 	margin-top:30px;
+	font-style: italic;
 }
 .material-icons.new-video-icon {
 	font-size: 30px;
+	font-style: italic;
 }
 
 
@@ -269,21 +278,36 @@ a:hover {
 	margin:0 100px;
 }
 .index-video-contents {
-	margin:0 150px;
+	float:left;
+	width:80%;
+	margin-left: 30px;
 }
 .index-video-title {
 	font-size: 50px;
 	font-family: verdana;
 	margin: 0 0 30px 130px;
+	font-style: italic;
+}
+.index-squeeze-title {
+	font-size:30px;
+	font-family: verdana;
+	text-align:center;
+	font-style:italic;
 }
 .index-video-tag-menu {
-	margin: 10px;
+	margin:100px 20px 20px 20px;
+	width:10%;
+	float:left;
 }
 .index-video-tag-name {
 	font-size: 10px;
-	margin-left: 20px;
+	margin:10px 10px 0 20px;
 	padding:5px;
-	background-color: #d5d5d5;
+	text-align:center;
+	color:black;
+}
+.index-video-tag-name:hover {
+	color:orange;
 }
 .index-video-text {
 	float:left;
@@ -303,12 +327,17 @@ a:hover {
 }
 .index-video-information {
 	color:#7a7a7c;
+	margin-bottom:10px;
 }
 .index-video-tag {
 	text-align: right;
 }
+.index-video-create {
+	color:#7a7a7c;
+}
 .material-icons.index-video-icon {
 	font-size:30px;
+	font-style: italic;
 }
 
 
@@ -404,6 +433,7 @@ a:hover {
 .comment-list-title {
 	color:white;
 	margin: 40px 0 20px 0;
+	font-style: italic;
 }
 .show-comment-text {
 	width: 80%;
@@ -426,6 +456,7 @@ a:hover {
 .comment-title {
 	color:white;
 	margin-top: 50px;
+	font-style: italic;
 }
 .post-comment-button:hover {
 	opacity:0.8;
@@ -436,6 +467,10 @@ a:hover {
 	width: 90%;
 	margin:0 auto;
 	text-align: center;
+	font-style: italic;
+}
+.inform-button:hover {
+	color:orange;
 }
 .show-video-play {
 	display:block;
@@ -468,6 +503,7 @@ a:hover {
 	font-family: verdana;
 	text-align:left;
 	margin:0 30px 0 120px;
+	font-style: italic;
 }
 .mypage-text {
 	padding: 20px;
@@ -524,6 +560,7 @@ a:hover {
 	font-family: verdana;
 	margin:10px;
 	text-align:center;
+	font-style: italic;
 }
 .edit-video-text {
 	background-color: #ccced1;
@@ -575,6 +612,7 @@ a:hover {
 	font-size: 50px;
 	font-family: verdana;
 	margin-bottom: 30px;
+	font-style: italic;
 }
 .mypage-edit-text {
 	margin:20px;
@@ -582,16 +620,20 @@ a:hover {
 	float:left;
 }
 .edit-image {
-	font-size: 30px
+	font-size: 30px;
+	font-style: italic;
 }
 .edit-name {
 	font-size: 30px;
+	font-style: italic;
 }
 .edit-email {
 	font-size: 30px;
+	font-style: italic;
 }
 .edit-password {
 	font-size: 30px;
+	font-style: italic;
 }
 .mypage-edit-button {
 	width: 150px;
@@ -605,6 +647,7 @@ a:hover {
 .logout-button-user {
 	color: #a966f4;
 	width: 160px;
+	font-style: italic;
 }
 .logout-button-user:hover {
 	color:orange;

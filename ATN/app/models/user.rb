@@ -9,6 +9,7 @@ class User < ApplicationRecord
 
   has_many :post_comments, dependent: :destroy
   has_many :articles
+  has_many :ngvideos
 
 
 end

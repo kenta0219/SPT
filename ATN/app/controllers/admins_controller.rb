@@ -1,6 +1,7 @@
 class AdminsController < ApplicationController
 
 	def top_ad
+		@ngvideo = Ngvideo.all.pluck(:article_id).uniq
 		@articles = Article.all
 	end
 
@@ -29,18 +30,16 @@ class AdminsController < ApplicationController
 
 
 
-	def index_tag
-		@tags = Tag.all
-	end
 
 	def new_tag
 		@tag = Tag.new
+		@tags = Tag.all
 	end
 
 	def create_tag
 		@tag = Tag.new(tag_params)
 		@tag.save
-		redirect_to index_tag_path
+		redirect_to new_tag_path
 	end
 
 	def update_tag
@@ -48,14 +47,11 @@ class AdminsController < ApplicationController
 	end
 
 	def delete_tag
-		
+		@tag = Tag.find(params[:id])
+		@tag.destroy
+		redirect_to new_tag_path
 	end
 
-	def article_create
-		@article = Article.new
-		@article.save
-		redirect_to top_video_path
-	end
 
 	def destroy
 		@article = Article.find(params[:id])

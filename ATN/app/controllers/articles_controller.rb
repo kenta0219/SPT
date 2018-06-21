@@ -7,14 +7,25 @@ class ArticlesController < ApplicationController
 
 
   def index_video
-    @articles = Article.page(params[:page]).reverse_order
+    @article = Article.all
+
+    if params[:tag_id] == "tag" then
+      @article = @article.where(tag: params[:tag_id])
+    end
+
+    @articles = @article.page(params[:page]).reverse_order
     @tags = Tag.all
   end
 
 
   def show_video
     @article = Article.find(params[:id])
+    @ngvideo = Ngvideo.new
     @post_comment = PostComment.new
+  end
+
+  def show_tag
+    @articles = Article.page(params[:page]).reverse_order
   end
 
 
@@ -38,6 +49,14 @@ class ArticlesController < ApplicationController
     redirect_to user_mypage_path(current_user.id)
   end
 
+  def article_add
+    ngvideo = Ngvideo.new(ngvideo_params)
+    ngvideo.user_id = current_user.id
+    ngvideo.save
+    redirect_to top_video_path
+  end
+
+
 
   private
     def set_article
@@ -48,5 +67,8 @@ class ArticlesController < ApplicationController
       params.require(:article).permit(:title, :video, :video_information, :tag_id, :user_id)
     end
 
+    def ngvideo_params
+      params.require(:ngvideo).permit(:article_id)
+    end
 
 end

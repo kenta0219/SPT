@@ -19,10 +19,12 @@ Rails.application.routes.draw do
   get 'article/index' => 'articles#index_video', as: 'index_video'
   get 'new' => 'articles#new_video', as: 'new_video'
   get 'article/:id' => 'articles#show_video', as: 'show_video'
+  get 'article/tag/:id' => 'articles#show_tag', as: 'show-tag'
 
 
   get 'article/:id/edit' => 'articles#article_edit', as: 'article_edit'
   post 'article/create' => 'articles#create', as: 'article_create'
+  post 'article/add' => 'articles#article_add', as: 'article_add'
 
 
   resources :articles do
@@ -44,10 +46,10 @@ Rails.application.routes.draw do
   delete 'admin/:id/delete' => 'admins#admin_delete', as: 'delete_admin'
 
   get 'admin/tag/new' => 'admins#new_tag', as: 'new_tag'
-  get 'admin/tag/index' => 'admins#index_tag', as: 'index_tag'
   post 'admin/tag/create' => 'admins#create_tag', as: 'tag_create'
+  delete 'admin/tag/:id' => 'admins#delete_tag', as: 'delete_tag'
 
-  get 'admin/article/create' => 'admins#article_create', as: 'article_create_ad'
+
   delete 'admin/article/:id/delete' => 'admins#destroy', as: 'destroy_ad'
 
 

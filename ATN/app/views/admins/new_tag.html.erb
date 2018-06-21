@@ -1,18 +1,42 @@
 <%= render 'admins/ad_header' %>
-
-<div class="new-tag">
-	<div class="space"></div>
-	<div class="new-tag-contents">
-		<div class="new-tag-title">Add Tag</div>
-			<div class="new-tag-text">
-				<%= form_for @tag, url: tag_create_path do |t| %>
-					<div class="new-tag-name">＜New Tag Name＞<%= t.text_field :tag_name %></div><br>
-					<div class="new-tag-button"><%= t.submit 'Add', class: "tag-new-button" %></div>
-				<% end %>
+<div class="tag-page clearfix">
+	<div class="tag-page-contents clearfix">
+		<div class="space"></div>
+			<div class="new-tag">
+				<div class="new-tag-title">Add Tag</div>
+					<div class="new-tag-text">
+						<%= form_for @tag, url: tag_create_path do |t| %>
+							<div class="new-tag-name">＜New Tag Name＞<%= t.text_field :tag_name %></div><br>
+							<div class="new-tag-button"><%= t.submit 'Add', class: "tag-new-button" %></div>
+						<% end %>
+					</div>
 			</div>
-	</div>
-</div>
 
+
+			<div class="index-tag">
+				<div class="index-tag-title">Tag List</div>
+				<table class="table-admin">
+					<thead>
+						<tr>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @tags.each do |tag| %>
+							<tr>
+								<td class="tag-table-name"># <%= tag.tag_name %></td>
+								<td class="tag-table-control">
+									<%= link_to delete_tag_path(tag), method: :delete, data: {confirm: 'Are you sure ?'} do %>
+									<div class="delete-tag-button">Delete Tag</div>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+</div>
 
 
 

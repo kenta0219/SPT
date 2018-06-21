@@ -1,5 +1,6 @@
 header {
 	position:fixed;
+	font-style: italic;
 }
 
 
@@ -22,6 +23,7 @@ a:hover {
 	min-height: 850px;
 	background-image: url('/images/033.jpg');
 	background-size: cover;
+	background-attachment: fixed;
 }
 .top-main-visual-ad {
 	margin:0 100px;
@@ -44,6 +46,7 @@ a:hover {
 	text-align:center;
 	color: #606363;
 	margin-top: 30px;
+	font-style: italic;
 }
 .material-icons.pick-up-icon-ad {
 	font-size: 30px;
@@ -87,11 +90,12 @@ a:hover {
 	width: 30%;
 	font-size:40px;
 }
-.sports-site {
-	width:120px;
+.sports-site-ad {
+	width:160px;
 	color:black;
+	margin-left:50px;
 }
-.sports-site:hover {
+.sports-site-ad:hover {
 	color:orange;
 }
 
@@ -121,6 +125,7 @@ a:hover {
 	font-family:verdana;
 	margin-bottom: 30px;
 	color:white;
+	font-style: italic;
 }
 .admin-text {
 	margin:20px 60px;
@@ -129,16 +134,19 @@ a:hover {
 	font-size: 20px;
 	padding-right: 110px;
 	color:white;
+	font-style: italic;
 }
 .table-email {
 	font-size: 20px;
 	padding-right: 80px;
 	color:white;
+	font-style: italic;
 }
 .table-control {
 	font-size: 20px;
 	padding-left: 50px;
 	color:white;
+	font-style: italic;
 }
 .table-name-ad {
 	font-size: 30px;
@@ -157,51 +165,68 @@ a:hover {
 
 
 /*new_tag*/
-.new-tag {
+.tag-page {
 	width:100%;
 }
-.new-tag-contents {
-	margin: 0 200px;
+.tag-page-contents {
+	margin:0 auto;
+	width:90%;
+}
+.new-tag {
+	width:40%;
+	float:left;
+	margin: 10px 30px;
 }
 .new-tag-title {
 	font-size: 50px;
 	font-family: verdana;
+	font-style: italic;
 }
 .new-tag-text {
 	margin: 20px;
 }
 .new-tag-name {
 	font-size: 30px;
+	font-style: italic;
 }
 .tag-new-button {
 	width:150px;
 }
-
-
-
-
-
-
-
-
-
-
-/*index_tag*/
 .index-tag {
-	width:100%;
-}
-.index-tag-contents {
-	margin:0 200px;
+	width:50%;
+	float:left;
+	margin:10px 0 0 50px;
 }
 .index-tag-title {
 	font-size: 50px;
 	font-family: verdana;
+	font-style: italic;
 }
-.index-tag-text {
-	font-size: 30px;
-	margin:20px;
+.table-admin {
+	margin-top: 30px;
 }
-
+.tag-table-name-ad {
+	width:50%;
+	margin:0 auto;
+	font-size: 20px;
+}
+.tag-table-control-ad {
+	font-size: 20px;
+}
+.tag-table-name {
+	font-size: 20px;
+}
+.tag-table-control {
+	font-size: 20px;
+	text-align:left;
+}
+.delete-tag-button {
+	color:#a966f4;
+	margin-left: 150px;
+}
+.delete-tag-button:hover {
+	color:orange;
+}
 
 
 
