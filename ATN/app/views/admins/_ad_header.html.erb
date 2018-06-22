@@ -8,22 +8,14 @@
 
 		<div class="header-nav-box-ad clearfix">
 			<% if admin_signed_in? %>
-				<%= link_to new_tag_path do %>
-					<i class="material-icons admin-nav-icon">menu</i>
+				<%= link_to new_tag_path, class: "admin-page-path" do %>
+					Admin Page
 				<% end %>
-				<%= link_to admin_ad_path do %>
-					<i class="material-icons admin-nav-icon">people</i>
-				<% end %>
-				<%= link_to destroy_admin_session_path, method: :delete do %>
-					<i class="material-icons admin-nav-icon">person_outline</i>
+				<%= link_to destroy_admin_session_path, class: "admin-logout-path", method: :delete, data: {confirm: "Are you sure you want to log out?"} do %>
+					Log Out
 				<% end %>
 			<% else %>
-				<%= link_to new_admin_registration_path do %>
-					<i class="material-icons admin-nav-icon">open_in_new</i>
-				<% end %>
-				<%= link_to new_admin_session_path do %>
-					<i class="material-icons admin-nav-icon">input</i>
-				<% end %>
+
 			<% end %>
 
 		</div>

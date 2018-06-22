@@ -27,8 +27,8 @@
                 <div class="index-video-film">
                   <%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
                 </div><br>
-                <%= link_to show_video_path(article) do %>
-                    <div class="index-video-name">【<%= article.title %>】</div>
+                <%= link_to show_video_path(article), class: "index-video-name" do %>
+                    【<%= article.title %>】
                 <% end %>
                     <div class="index-video-tag">
                       <% if article.tag %>

@@ -19,8 +19,12 @@ class UsersController < ApplicationController
 
 	def update_user
 		@user = User.find(params[:id])
-		@user.update(user_params)
-		redirect_to user_mypage_path(current_user.id)
+		if 	@user.update(user_params)
+			flash[:notice] = "編集完了"
+			redirect_to user_mypage_path(current_user.id)
+		else
+			render 'edit_user'
+		end
 	end
 
 	def delete_user

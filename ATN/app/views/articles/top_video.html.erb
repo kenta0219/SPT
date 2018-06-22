@@ -1,58 +1,79 @@
 <%= render 'users/video_header' %>
-
-
-<div class="top-video">
-	<div class="top-video-head">
-		<div class="space"></div>
+<% if user_signed_in? %>
+	<div class="top-video">
+		<div class="top-video-head">
 			<div class="top-main-field clearfix">
+				<% flash.each do |key, value| %>
+				  <%= content_tag(:div, value, class: "#{key}") %>
+				<% end %>
 				<div class="top-image-text clearfix">
 					sports
 				</div>
 			</div>
-	</div>
-		<div class="top-main-visual">
-			<div class="top-main-contents">
-				<div class="pick-up-video"><i class="material-icons pick-up-icon">live_tv</i> New Video <i class="material-icons pick-up-icon">live_tv</i></div>
+		</div>
+			<div class="top-main-visual">
+				<div class="top-main-contents">
+					<div class="pick-up-video"><i class="material-icons pick-up-icon">live_tv</i> New Video <i class="material-icons pick-up-icon">live_tv</i></div>
 
-				<div class="top-contents clearfix">
-					<%
-						display_articles = []
+					<div class="top-contents clearfix">
+						<%
+							display_articles = []
 
-						articles_len = @articles.length
+							articles_len = @articles.length
 
-						iiii = 0
+							iiii = 0
 
-						while iiii < articles_len && iiii < 3 do
-							display_articles.push(@articles[iiii])
-							iiii += 1
-						end
+							while iiii < articles_len && iiii < 3 do
+								display_articles.push(@articles[iiii])
+								iiii += 1
+							end
 
-					%>
-					<% display_articles.each do |article| %>
-			            <div class="top-video-text clearfix">
-			            	<div class="top-video-contents clearfix">
-				                <%= link_to show_video_path(article) do %>
-				                    <div class="top-video-name">【<%= article.title %>】</div>
-				                <% end %>
-			                    	<div class="top-video-film clearfix">
-				                  		<%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
-				               		</div>
-				               		<div class="top-video-tag">
-			                    		<% if article.tag %>
-			                    			＜<%= article.tag.tag_name %>＞
-			                    		<% end %>
-			                    	</div>
+						%>
+						<% display_articles.each do |article| %>
+				            <div class="top-video-text clearfix">
+				            	<div class="top-video-contents clearfix">
+				            		<div class="top-video-name-box">
+						                <%= link_to show_video_path(article), class: "top-video-name" do %>
+						                    【<%= article.title %>】
+						                <% end %>
+						            </div>
+				                    	<div class="top-video-film clearfix">
+					                  		<%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+					               		</div>
+					               		<div class="top-video-tag">
+				                    		<% if article.tag %>
+				                    			＜<%= article.tag.tag_name %>＞
+				                    		<% end %>
+				                    	</div>
+					            </div>
+						            <div class="top-video-user">
+				                    		<% if article.user %>
+				                    			<%= attachment_image_tag article.user, :image, :fill, 300, 300, format: 'jpeg', class: "profile-img-responsive pull-left image", fallback: "no-artist-image.jpg", size: "20x20" %>
+				                    			<%= article.user.name %>
+				                   			<% end %>
+				                   		</div>
+				               		<div class="top-video-information"><%= article.video_information %></div>
 				            </div>
-				            <div class="top-video-user">
-		                    		<% if article.user %>
-		                    			<%= attachment_image_tag article.user, :image, :fill, 300, 300, format: 'jpeg', class: "profile-img-responsive pull-left image", fallback: "no-artist-image.jpg", size: "20x20" %>
-		                    			<%= article.user.name %>
-		                   			<% end %>
-		                   		</div>
-		               		<div class="top-video-information"><%= article.video_information %></div>
-			            </div>
-	        		<% end %>
-	        	</div>
+		        		<% end %>
+		        	</div>
+				</div>
+			</div>
+	</div>
+
+<% else %>
+	<div class="top-video-head">
+		<div class="top-main-field clearfix">
+			<div class="top-image-text clearfix">
+				sports
+			</div>
+			<div class="top-user-new">
+				<%= link_to new_user_registration_path, class: "user-new-sign" do %>
+					新規登録
+				<% end %>
+				<%= link_to new_user_session_path, class: "user-log-in" do %>
+					ログイン
+				<% end %>
 			</div>
 		</div>
-</div>
+	</div>
+<% end %>

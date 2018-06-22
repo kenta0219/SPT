@@ -1,41 +1,73 @@
 <%= render 'admins/ad_header' %>
-<div class="tag-page clearfix">
-	<div class="tag-page-contents clearfix">
-		<div class="space"></div>
-			<div class="new-tag">
-				<div class="new-tag-title">Add Tag</div>
-					<div class="new-tag-text">
-						<%= form_for @tag, url: tag_create_path do |t| %>
-							<div class="new-tag-name">＜New Tag Name＞<%= t.text_field :tag_name %></div><br>
-							<div class="new-tag-button"><%= t.submit 'Add', class: "tag-new-button" %></div>
-						<% end %>
-					</div>
-			</div>
 
-
-			<div class="index-tag">
-				<div class="index-tag-title">Tag List</div>
-				<table class="table-admin">
+<div class="space"></div>
+<div class="admin-page">
+	<div class="admin-contents clearfix">
+		<div class="admin-title">Members</div>
+			<div class="admin-text clearfix">
+				<table table="table-ad">
 					<thead>
 						<tr>
-							<th></th>
-							<th></th>
+							<th class="table-name">Name</th>
+							<th class="table-email">Email</th>
+							<th class="table-control">Control</th>
 						</tr>
 					</thead>
+
 					<tbody>
-						<% @tags.each do |tag| %>
-							<tr>
-								<td class="tag-table-name"># <%= tag.tag_name %></td>
-								<td class="tag-table-control">
-									<%= link_to delete_tag_path(tag), method: :delete, data: {confirm: 'Are you sure ?'} do %>
-									<div class="delete-tag-button">Delete Tag</div>
-									<% end %>
-								</td>
-							</tr>
-						<% end %>
+					<% @admins.each do |admin| %>
+						<tr>
+							<td class="table-name-ad"><%= admin.name %></td>
+							<td class="table-email-ad"><%= admin.email %></td>
+							<td><%= link_to "Edit", admin_edit_path(admin), class: "table-edit-ad" %></td>
+							<td><%= link_to "Destroy", delete_admin_path(admin), class: "table-delete-ad",method: :delete, data: {
+									confirm: "Are you sure to delete?"} %></td>
+						</tr>
+					<% end %>
 					</tbody>
 				</table>
 			</div>
+	</div>
+
+
+		<div class="tag-page clearfix">
+			<div class="tag-page-contents clearfix">
+				<div class="new-tag">
+					<div class="new-tag-title">Add Tag</div>
+						<div class="new-tag-text">
+							<%= form_for @tag, url: tag_create_path do |t| %>
+								<div class="new-tag-name">＜New Tag Name＞<%= t.text_field :tag_name %></div><br>
+								<div class="new-tag-button"><%= t.submit 'Add', class: "tag-new-button" %></div>
+							<% end %>
+						</div>
+				</div>
+
+
+				<div class="index-tag">
+					<div class="index-tag-title">Tag List</div>
+					<table class="table-admin">
+						<thead>
+							<tr>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<% @tags.each do |tag| %>
+								<tr>
+									<td class="tag-table-name"># <%= tag.tag_name %></td>
+									<td class="tag-table-control">
+										<%= link_to delete_tag_path(tag), method: :delete, data: {confirm: 'Are you sure ?'} do %>
+										<div class="delete-tag-button">Delete Tag</div>
+										<% end %>
+									</td>
+								</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 </div>
 
 

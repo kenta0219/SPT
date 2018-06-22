@@ -24,11 +24,6 @@ class ArticlesController < ApplicationController
     @post_comment = PostComment.new
   end
 
-  def show_tag
-    @articles = Article.page(params[:page]).reverse_order
-  end
-
-
   def new_video
     @article = Article.new
   end
@@ -45,15 +40,23 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
-    @article.destroy
-    redirect_to user_mypage_path(current_user.id)
+    if  @article.destroy
+        flash[:notice] = '削除完了'
+        redirect_to user_mypage_path(current_user.id)
+    else
+      render 'user_mypage'
+    end
   end
 
   def article_add
-    ngvideo = Ngvideo.new(ngvideo_params)
-    ngvideo.user_id = current_user.id
-    ngvideo.save
-    redirect_to top_video_path
+    @ngvideo = Ngvideo.new(ngvideo_params)
+    @ngvideo.user_id = current_user.id
+    if   @ngvideo.save
+        flash[:notice] = '通報完了'
+        redirect_to top_video_path
+    else
+      render 'show_video'
+    end
   end
 
 

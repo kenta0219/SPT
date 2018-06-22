@@ -9,9 +9,6 @@ class AdminsController < ApplicationController
 		
 	end
 
-	def admin_ad
-		@admins = Admin.all
-	end
 
 	def edit_admin
 		@admin = Admin.find(params[:id])
@@ -20,7 +17,7 @@ class AdminsController < ApplicationController
 	def admin_update
 		@admin = Admin.find(params[:id])
 		@admin.update(admin_params)
-		redirect_to admin_ad_path(current_admin.id)
+		redirect_to new_tag_path(current_admin.id)
 	end
 
 	def admin_delete
@@ -34,6 +31,7 @@ class AdminsController < ApplicationController
 	def new_tag
 		@tag = Tag.new
 		@tags = Tag.all
+		@admins = Admin.all
 	end
 
 	def create_tag
@@ -55,6 +53,7 @@ class AdminsController < ApplicationController
 
 	def destroy
 		@article = Article.find(params[:id])
+		Ngvideo.where(article_id: @article.id).delete_all
 		@article.destroy
 		redirect_to top_ad_path
 	end

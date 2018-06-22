@@ -15,16 +15,33 @@
  *= require material_icons
  */
 
-
-body {
+html,body {
 	margin:0;
 }
+
+
+
+header {
+	width:100%;
+	position:fixed;
+	font-style: italic;
+}
 .space {
-	height:120px;
+	height:100px;
 }
   /*clearfix*/
 .clearfix::after {
 	content: "";
 	display: block;
 	clear: both;
+}
+.notice {
+	font-size: 30px;
+    font-family: verdana;
+    text-align: center;
+    width: 40%;
+    border: solid 1px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 5px 5px gray;
 }

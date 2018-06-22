@@ -1,7 +1,4 @@
-header {
-	position:fixed;
-	font-style: italic;
-}
+
 
 
 
@@ -25,20 +22,24 @@ a:hover {
 	background-size: cover;
 	background-attachment: fixed;
 }
-.top-main-visual-ad {
-	margin:0 100px;
-}
-
-.top-main-field {
+.top-main-field-ad {
 	width:100%;
 	height:700px;
 }
-.top-image-field {
-	height:500px;
+.top-image-text-ad {
+	margin:0 100px ;
+	font-family: verdana;
+	font-weight: 900;
+	font-variant: small-caps;
+	font-size: 100px;
+	color: white;
+	padding-top: 150px;
+}
+.top-main-visual-ad {
 	width:100%;
 }
 .top-main-contents-ad {
-	margin: 0 100px;
+	margin: 0 150px 100px 150px;
 }
 .pick-up-video-ad {
 	font-size: 50px;
@@ -51,9 +52,67 @@ a:hover {
 .material-icons.pick-up-icon-ad {
 	font-size: 30px;
 }
-
-
-
+.top-video-text-ad {
+	margin-top: 40px;
+}
+.top-video-name-ad {
+	font-size: 40px;
+	color: black;
+	margin:0 150px 20px 150px;
+}
+.top-video-film-ad {
+	text-align: center;
+}
+.top-video-tag-ad {
+	font-size: 20px;
+	margin:0 auto;
+	width: 40%;
+	text-align: right;
+}
+.top-video-user-ad {
+	width:50%;
+	margin:0 auto;
+	text-align:left;
+}
+.top-video-information-ad {
+	color:#7a7a7c;
+	padding:10px 20px 0 20px;
+	width:45%;
+	margin:0 auto;
+}
+.article-delete-button {
+	width:40%;
+	margin:0 auto;
+	text-align:right;
+}
+.article-delete {
+	color: #a966f4;
+}
+.article-delete:hover {
+	color:orange;
+}
+.top-admin-new {
+	margin:0 auto;
+	width:70%;
+	text-align: right;
+	padding:40px;
+}
+.admin-sign-new {
+	color:white;
+	font-size: 50px;
+	font-family: serif;
+}
+.admin-sign-new:hover {
+	opacity: 0.7;
+}
+.admin-log-in {
+	color:white;
+	font-size: 50px;
+	font-family: serif;
+}
+.admin-log-in:hover {
+	opacity: 0.7;
+}
 
 
 
@@ -62,18 +121,11 @@ a:hover {
 
 
 /*ad_header*/
-.header-menu-ad {
-	width:100%;
-	height:100px;
-	position:absolute;
-
-}
 .header-nav-box-ad {
-	height: 50px;
 	text-align: right;
 	float:left;
 	width:60%;
-	padding:10px;
+	padding:25px;
 }
 .material-icons.admin-nav-icon {
 	display:inline-block;
@@ -98,6 +150,22 @@ a:hover {
 .sports-site-ad:hover {
 	color:orange;
 }
+.admin-page-path {
+	font-size: 30px;
+	padding:15px;
+	color: black;
+}
+.admin-page-path:hover {
+	color: orange;
+}
+.admin-logout-path {
+	font-size: 30px;
+	padding:15px 10px 10px 40px;
+	color:black;
+}
+.admin-logout-path:hover {
+	color:orange;
+}
 
 
 
@@ -105,17 +173,14 @@ a:hover {
 
 
 
-
-
-
-
-
-/*admin_member_ad*/
-.admin-ad {
+/*new_tag*/
+.admin-page {
 	width:100%;
-	background-image: url('/images/024.jpg');
+	/*background-image: url('/images/024.jpg');*/
 	background-size:cover;
+	max-height:1500px;
 	min-height:850px;
+	margin: 50px;
 }
 .admin-contents {
 	margin: 0 100px;
@@ -124,7 +189,7 @@ a:hover {
 	font-size: 50px;
 	font-family:verdana;
 	margin-bottom: 30px;
-	color:white;
+/*	color:white;*/
 	font-style: italic;
 }
 .admin-text {
@@ -133,43 +198,49 @@ a:hover {
 .table-name {
 	font-size: 20px;
 	padding-right: 110px;
-	color:white;
+	/*color:white;*/
 	font-style: italic;
 }
 .table-email {
 	font-size: 20px;
 	padding-right: 80px;
-	color:white;
+	/*color:white;*/
 	font-style: italic;
 }
 .table-control {
 	font-size: 20px;
 	padding-left: 50px;
-	color:white;
+	/*color:white;*/
 	font-style: italic;
 }
 .table-name-ad {
 	font-size: 30px;
-	color:white;
+/*	color:white;*/
 }
 .table-email-ad {
-	color:white;
-}
-.table-edit {
+	/*color:white;
+*/}
+.table-edit-ad {
 	padding-left: 50px;
-	color:white;
+	color:orange;
+}
+.table-edit-ad:hover {
+	color: #a966f4;
+}
+.table-delete-ad {
+	color:#a966f4;
+}
+.table-delete-ad:hover {
+	color:orange;
 }
 
 
 
-
-
-/*new_tag*/
 .tag-page {
 	width:100%;
 }
 .tag-page-contents {
-	margin:0 auto;
+	margin:50px auto;
 	width:90%;
 }
 .new-tag {
@@ -227,6 +298,17 @@ a:hover {
 .delete-tag-button:hover {
 	color:orange;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

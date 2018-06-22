@@ -13,7 +13,8 @@
 					<div class="edit-password">＜Password＞<%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 					<div class="edit-button-user"><%= f.submit "Edit", class: "mypage-edit-button" %></div>
 				<% end %>
-				<br><%= link_to destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} do %>
+				<br>
+				<%= link_to destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} do %>
 						<div class="logout-button-user">＜Log Out＞</div>
 				<% end %>
 			</div>

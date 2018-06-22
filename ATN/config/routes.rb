@@ -19,7 +19,6 @@ Rails.application.routes.draw do
   get 'article/index' => 'articles#index_video', as: 'index_video'
   get 'new' => 'articles#new_video', as: 'new_video'
   get 'article/:id' => 'articles#show_video', as: 'show_video'
-  get 'article/tag/:id' => 'articles#show_tag', as: 'show-tag'
 
 
   get 'article/:id/edit' => 'articles#article_edit', as: 'article_edit'
@@ -39,7 +38,6 @@ Rails.application.routes.draw do
   #admin
   get 'admin' => 'admins#top_ad', as: 'top_ad'
   get 'admin/show' => 'admins#show_ad', as: 'show_ad'
-  get 'admin/page' => 'admins#admin_ad', as: 'admin_ad'
   get 'admin/:id/edit' => 'admins#edit_admin', as: 'admin_edit'
   post 'admin/create' => 'admins#admin_create', as: 'create_admin'
   patch 'admin/:id/update' => 'admins#admin_update', as: 'update_admin'
