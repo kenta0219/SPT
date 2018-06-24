@@ -37,9 +37,11 @@
 				                      <% end %>
 				                    </div>
 				                    <div class="edit-video-information"><%= article.video_information %></div>
-			                    		<%= link_to destroy_path(article) , method: :delete, data: {confirm: 'Are you sure you want to delete contents?'} do %>
-			                    			<div class="edit-video-destroy">＜Delete Contents＞</div>
-			                    		<% end %>
+				                    	<div class="edit-video-delete-button">
+				                    		<%= link_to destroy_path(article), class: "edit-video-destroy" , method: :delete, data: {confirm: 'Are you sure you want to delete contents?'} do %>
+				                    			＜Delete Contents＞
+				                    		<% end %>
+				                    	</div>
 				                    	<div class="edit-video-film clearfix">
 				                    		<%= link_to article.video_url.to_s do %>
 					                			<%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>

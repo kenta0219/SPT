@@ -6,8 +6,17 @@
 				<% flash.each do |key, value| %>
 				  <%= content_tag(:div, value, class: "#{key}") %>
 				<% end %>
-				<div class="top-image-text clearfix">
-					sports
+				<div class="top-image-text">
+					Sports
+				</div>
+				<div class="top-image-text2">
+					Share
+				</div>
+				<div class="top-image-text3">
+					House
+				</div>
+				<div class="top-image-text4">
+					みんなでスポーツを盛り上げよう！
 				</div>
 			</div>
 		</div>
@@ -59,12 +68,21 @@
 				</div>
 			</div>
 	</div>
+<footer>
+	<div class="user-top-footer"></div>
+</footer>
 
 <% else %>
 	<div class="top-video-head">
 		<div class="top-main-field clearfix">
-			<div class="top-image-text clearfix">
-				sports
+			<div class="top-image-text">
+				Sports
+			</div>
+			<div class="top-image-text2">
+				Share
+			</div>
+			<div class="top-image-text3">
+				House
 			</div>
 			<div class="top-user-new">
 				<%= link_to new_user_registration_path, class: "user-new-sign" do %>
@@ -74,6 +92,9 @@
 					ログイン
 				<% end %>
 			</div>
+				<div class="top-image-text4-new">
+					ルームメイトになろう！
+				</div>
 		</div>
 	</div>
 <% end %>

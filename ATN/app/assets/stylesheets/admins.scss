@@ -12,6 +12,103 @@ a:hover {
 
 
 
+/*sign_up*/
+.signup-page-ad {
+	width:100%;
+	min-height:850px;
+	background-image:url('/images/047.jpg');
+	background-size: cover;
+}
+.signup-contents-ad {
+	font-size:20px;
+	margin:0 200px;
+	color:white;
+	font-family: verdana;
+	font-weight: 600;
+}
+.admin-signup-title {
+	font-family: verdana;
+	font-size: 90px;
+	font-weight: 600;
+}
+.signup-text-ad {
+	margin-top: 50px;
+}
+.signup-name-field-ad {
+	font-size: 30px;
+}
+.signup-email-field-ad {
+	margin-top: 20px;
+	font-size: 30px;
+}
+.signup-password-field-ad {
+	margin-top: 20px;
+	font-size: 30px;
+}
+.signup-password-con-field-ad {
+	margin-top: 20px;
+	font-size: 30px;
+}
+.field-signup-submit-ad {
+	margin-top: 10px;
+}
+.login-path-button-ad {
+	color:white;
+	font-size: 30px;
+}
+.login-path-button-ad:hover {
+	opacity:0.4;
+}
+
+
+
+/*Log_in*/
+.login-page-ad {
+	width:100%;
+	min-height:850px;
+	background-image: url('/images/047.jpg');
+	background-size: cover;
+}
+.login-contents-ad {
+	margin: 0 200px;
+	font-size:20px;
+	font-family: verdana;
+	color:white;
+	font-weight: 600;
+}
+.admin-login-title {
+	font-family: verdana;
+	font-size: 90px;
+	font-weight:600;
+}
+.login-text-ad {
+	margin-top: 50px;
+}
+.field-login-email-ad {
+	font-size: 30px;
+}
+.field-login-password-ad {
+	font-size: 30px;
+}
+.field-login-remember-ad {
+	font-size: 20px;
+}
+.signup-path-button-ad{
+	color:white;
+	font-size: 30px;
+}
+.signup-path-button-ad:hover {
+	opacity:0.4;
+}
+.forgot-password-button-ad {
+	color:orange;
+}
+.forgot-password-button-ad:hover {
+	opacity:0.5;
+}
+
+
+
 /*top_ad*/
 .top-video-ad {
 	width:100%;
@@ -27,13 +124,36 @@ a:hover {
 	height:700px;
 }
 .top-image-text-ad {
-	margin:0 100px ;
+	margin:0 100px;
+	padding-top: 130px;
 	font-family: verdana;
 	font-weight: 900;
 	font-variant: small-caps;
 	font-size: 100px;
 	color: white;
-	padding-top: 150px;
+}
+.top-image-text2-ad {
+	margin:0 200px;
+	font-family: verdana;
+	font-weight: 900;
+	font-variant: small-caps;
+	font-size: 100px;
+	color: white;
+}
+.top-image-text3-ad {
+	margin:0 300px;
+	font-family: verdana;
+	font-weight: 900;
+	font-variant: small-caps;
+	font-size: 100px;
+	color: white;
+}
+.top-image-text4-ad {
+	width:80%;
+	margin: 250px 350px 0 350px;
+	text-align: center;
+	font-size: 30px;
+	color:white;
 }
 .top-main-visual-ad {
 	width:100%;
@@ -94,26 +214,30 @@ a:hover {
 .top-admin-new {
 	margin:0 auto;
 	width:70%;
-	text-align: right;
-	padding:40px;
+	text-align: center;
+	padding-top:200px;
 }
 .admin-sign-new {
 	color:white;
 	font-size: 50px;
 	font-family: serif;
+	border: solid 1px white;
+	padding:10px;
+	margin-right: 2px;
 }
 .admin-sign-new:hover {
-	opacity: 0.7;
+	opacity:0.7;
 }
 .admin-log-in {
 	color:white;
 	font-size: 50px;
 	font-family: serif;
+	border: solid 1px white;
+	padding:10px;
 }
 .admin-log-in:hover {
-	opacity: 0.7;
+	opacity:0.7;
 }
-
 
 
 
@@ -137,15 +261,22 @@ a:hover {
 	color:orange;
 }
 .site-name-ad {
-	padding:20px;
+	padding:5px;
+	margin:10px;
 	float:left;
 	width: 30%;
 	font-size:40px;
+	font-style: italic;
 }
 .sports-site-ad {
 	width:160px;
-	color:black;
-	margin-left:50px;
+	color:white;
+	margin-left: 50px;
+	font-family: impact;
+	border: solid 1px white;
+	background-color:#4b4d4f;
+	text-align: center;
+	padding:10px;
 }
 .sports-site-ad:hover {
 	color:orange;

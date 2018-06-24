@@ -1,31 +1,30 @@
+<%= render 'admins/ad_header' %>
 
-
-<div class="login-page">
+<div class="login-page-ad">
   <div class="space"></div>
-  <div class="login-contents">
+  <div class="login-contents-ad clearfix">
 
-        <div class="login-text clearfix">
-            <div class="title clearfix">Log in</div>
-
+        <div class="admin-login-title clearfix">Log in</div>
+          <div class="login-text-ad clearfix">
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-              <div class="field">
-                <%= f.label :email %><br />
+              <div class="field-login-email-ad">
+                <div class="login-email-field-ad">＜Email＞</div>
                 <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
               </div>
 
-              <div class="field">
-                <%= f.label :password %><br />
+              <div class="field-login-password-ad">
+                <br><div class="login-password-field-ad">＜Password＞</div>
                 <%= f.password_field :password, autocomplete: "off" %>
               </div>
-
+              <br>
               <% if devise_mapping.rememberable? -%>
-                <div class="field">
+                <div class="field-login-remember-ad">
                   <%= f.check_box :remember_me %>
                   <%= f.label :remember_me %>
                 </div>
               <% end -%>
-
-              <div class="field">
+              <br>
+              <div class="field-login-submit-ad">
                 <%= f.submit "Log in" %>
               </div>
             <% end %>
