@@ -40,7 +40,6 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'pry-rails'
-  gem 'rspec-rails'
 end
 
 group :development do
@@ -58,6 +57,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 gem 'kaminari'
+
+gem 'rspec-rails'
 
 gem 'jquery-rails'
 

@@ -8,12 +8,12 @@ class ArticlesController < ApplicationController
 
   def index_video
     @article = Article.all
-
-    if params[:tag_id] == "tag" then
-      @article = @article.where(tag: params[:tag_id])
-    end
-
     @articles = @article.page(params[:page]).reverse_order
+    @tags = Tag.all
+  end
+
+  def show_tag
+    @article = Article.where(id:params[:tags_info])
     @tags = Tag.all
   end
 

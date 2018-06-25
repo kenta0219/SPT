@@ -20,7 +20,7 @@
         </div>
 
     <div class="index-video-contents clearfix">
-        <% @articles.each do |article| %>
+        <% @article.each do |article| %>
             <div class="index-video-text">
                 <div class="index-video-film">
                   <%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
@@ -45,7 +45,7 @@
         <% end %>
     </div>
 </div>
-<%= paginate @articles, class: "pagenate" %>
+
 <footer>
   <div class="user-footer clearfix">@ssh.inc</div>
 </footer>

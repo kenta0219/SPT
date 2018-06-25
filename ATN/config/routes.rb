@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'article/index' => 'articles#index_video', as: 'index_video'
   get 'new' => 'articles#new_video', as: 'new_video'
   get 'article/:id' => 'articles#show_video', as: 'show_video'
+  get 'article/tag/:id' => 'articles#show_tag', as: 'show_tag'
 
 
   get 'article/:id/edit' => 'articles#article_edit', as: 'article_edit'
