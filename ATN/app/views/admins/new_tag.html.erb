@@ -1,7 +1,7 @@
 <%= render 'admins/ad_header' %>
 
-<div class="space"></div>
-<div class="admin-page">
+<div class="admin-page clearfix">
+	<div class="space"></div>
 	<div class="admin-contents clearfix">
 		<div class="admin-title">Members</div>
 			<div class="admin-text clearfix">
@@ -32,17 +32,6 @@
 
 		<div class="tag-page clearfix">
 			<div class="tag-page-contents clearfix">
-				<div class="new-tag">
-					<div class="new-tag-title">Add Tag</div>
-						<div class="new-tag-text">
-							<%= form_for @tag, url: tag_create_path do |t| %>
-								<div class="new-tag-name">＜New Tag Name＞<%= t.text_field :tag_name %></div><br>
-								<div class="new-tag-button"><%= t.submit 'Add', class: "tag-new-button" %></div>
-							<% end %>
-						</div>
-				</div>
-
-
 				<div class="index-tag">
 					<div class="index-tag-title">Tag List</div>
 					<table class="table-admin">
@@ -66,9 +55,23 @@
 						</tbody>
 					</table>
 				</div>
+
+				<div class="new-tag">
+					<div class="new-tag-title">Add Tag</div>
+						<div class="new-tag-text">
+							<%= form_for @tag, url: tag_create_path do |t| %>
+								<div class="new-tag-name">＜New Tag Name＞<%= t.text_field :tag_name %></div><br>
+								<div class="new-tag-button"><%= t.submit 'Add', class: "tag-new-button" %></div>
+							<% end %>
+						</div>
+				</div>
 			</div>
 		</div>
+		<footer>
+			<div class="admin-footer">@ssh.inc</div>
+		</footer>
 </div>
+
 
 
 

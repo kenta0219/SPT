@@ -8,6 +8,14 @@ a:link {
 a:hover {
     text-decoration: none;
 }
+.admin-footer {
+	font-size: 40px;
+	text-align:center;
+	font-family:verdana;
+	padding: 15px 0;
+	color:black;
+}
+
 
 
 
@@ -159,7 +167,7 @@ a:hover {
 	width:100%;
 }
 .top-main-contents-ad {
-	margin: 0 150px 100px 150px;
+	margin: 0 150px 50px 150px;
 }
 .pick-up-video-ad {
 	font-size: 50px;
@@ -307,11 +315,10 @@ a:hover {
 /*new_tag*/
 .admin-page {
 	width:100%;
-	/*background-image: url('/images/024.jpg');*/
+	background-image: url('/images/048.jpg');
 	background-size:cover;
-	max-height:1500px;
 	min-height:850px;
-	margin: 50px;
+	color:white;
 }
 .admin-contents {
 	margin: 0 100px;
@@ -369,6 +376,7 @@ a:hover {
 
 .tag-page {
 	width:100%;
+	margin-bottom: 350px;
 }
 .tag-page-contents {
 	margin:50px auto;
@@ -435,27 +443,26 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
-
 /*edit_admin*/
 .edit-admin {
 	width:100%;
+	min-height:850px;
+	background-image:url('/images/031.jpg');
+	background-size: cover;
 }
 .edit-admin-title {
 	font-size: 50px;
-	font-family: verdana;
+	margin-bottom:30px;
 }
 .edit-admin-contents {
-	margin:0 200px;
+	margin:70px 200px 0 200px;
+	text-align: center;
+	color:white;
+	font-family: verdana;
+	font-style:italic;
 }
 .edit-admin-text {
-	margin: 20px;
+	margin:30px 20px 350px 20px;
 }
 .edit-admin-name {
 	font-size: 30px;
