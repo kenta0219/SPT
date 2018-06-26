@@ -1,18 +1,18 @@
 <%= render 'users/video_header' %>
 
-<div class="index-video clearfix">
+<div class="show-tag clearfix">
   <div class="space"></div>
-    <div class="index-video-top">
-        <div class="index-video-title clearfix">
-          <i class="material-icons index-video-icon">ondemand_video</i> Video List <i class="material-icons index-video-icon">ondemand_video</i>
+    <div class="show-tag-top">
+        <div class="show-tag-title clearfix">
+          <i class="material-icons show-tag-icon">ondemand_video</i> Video List <i class="material-icons show-tag-icon">ondemand_video</i>
         </div>
     </div>
 
-        <div class="index-video-tag-menu clearfix">
-          <div class="index-squeeze-title">Squeeze</div>
+        <div class="show-tag-tag-menu clearfix">
+          <div class="show-tag-squeeze-title">Squeeze</div>
             <% @tags.each do |tag| %>
               <%= link_to show_tag_path(tag) do %>
-                <div class="index-video-tag-name">
+                <div class="show-tag-tag-name">
                   # <%= tag.tag_name %>
                 </div>
               <% end %>
@@ -20,24 +20,24 @@
         </div>
 
     <div class="index-video-contents clearfix">
-        <% @article.each do |article| %>
-            <div class="index-video-text">
-                <div class="index-video-film">
+        <% @articles.each do |article| %>
+            <div class="show-tag-text">
+                <div class="show-tag-film">
                   <%= image_tag(article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
                 </div><br>
-                <%= link_to show_video_path(article), class: "index-video-name" do %>
+                <%= link_to show_video_path(article), class: "show-tag-name" do %>
                     【<%= article.title %>】
                 <% end %>
-                    <div class="index-video-tag">
+                    <div class="show-tag-tag">
                       <% if article.tag %>
                         ＜<%= article.tag.tag_name %>＞
                       <% end %>
                     </div>
-                    <div class="index-video-information"><%= article.video_information %></div>
+                    <div class="show-tag-information"><%= article.video_information %></div>
                       <% if article.user %>
                         <%= attachment_image_tag article.user, :image, :fill, 300, 300, format: 'jpeg', class: "profile-img-responsive pull-left image", fallback: "no-artist-image.jpg", size: "20x20" %>
                         <%= article.user.name %><br>
-                        <span class="index-video-create">
+                        <span class="show-tag-create">
                           <%= article.created_at.strftime("%Y/%m/%d %H:%M") %>
                         </span>
                       <% end %>
@@ -45,7 +45,6 @@
         <% end %>
     </div>
 </div>
-
 <footer>
   <div class="user-footer clearfix">@ssh.inc</div>
 </footer>

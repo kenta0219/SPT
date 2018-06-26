@@ -482,6 +482,86 @@ a:hover {
 
 
 
+
+/*show_tag*/
+.show-tag {
+	width:100%;
+}
+.show-tag-top {
+	margin:0 100px;
+}
+.show-tag-contents {
+	float:left;
+	width:80%;
+	margin:0 0 30px 30px;
+}
+.show-tag-title {
+	font-size: 50px;
+	font-family: verdana;
+	margin: 50px 0 30px 130px;
+	font-style: italic;
+}
+.show-tag-squeeze-title {
+	font-size:30px;
+	font-family: verdana;
+	text-align:center;
+	font-style:italic;
+}
+.show-tag-tag-menu {
+	margin:100px 20px 20px 20px;
+	width:10%;
+	float:left;
+}
+.show-tag-tag-name {
+	font-size: 10px;
+	margin:10px 10px 0 0;
+	padding:5px;
+	text-align:center;
+	color:black;
+	border:solid 1px black;
+	border-radius: 10% 10%;
+	box-shadow: 0 0 30px gray;
+}
+.show-tag-tag-name:hover {
+	color:orange;
+}
+.show-tag-text {
+	float:left;
+	margin:20px 5px 20px 5px;
+	background-color: #e5e6e8;
+	padding: 20px;
+	border:solid 2px black;
+	border-radius: 10% 10%;
+}
+.show-tag-film {
+	display:inline-block;
+}
+.show-tag-name {
+	font-size: 20px;
+	color:black;
+}
+.show-tag-name:hover {
+	color:#11549b;
+}
+.show-tag-information {
+	color:#7a7a7c;
+	margin-bottom:10px;
+}
+.show-tag-tag {
+	text-align: right;
+}
+.show-tag-create {
+	color:#7a7a7c;
+}
+.material-icons.show-tag-icon {
+	font-size:30px;
+	font-style: italic;
+}
+
+
+
+
+
 /*show_video*/
 .show-header-menu {
 	width:100%;

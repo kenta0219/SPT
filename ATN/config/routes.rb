@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   get 'article/:id/edit' => 'articles#article_edit', as: 'article_edit'
   post 'article/create' => 'articles#create', as: 'article_create'
-  post 'article/add' => 'articles#article_add', as: 'article_add'
+  post 'article/:id/add' => 'articles#article_add', as: 'article_add'
 
 
   resources :articles do

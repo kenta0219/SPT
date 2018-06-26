@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
 	# mypage
 	def mypage
-		@articles = current_user.articles.all
+		@articles = current_user.articles.all.reverse
 	end
 
 	def edit_user

@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def show_tag
-    @article = Article.where(id:params[:tags_info])
+    @articles = Article.where(tag_id:params[:id])
     @tags = Tag.all
   end
 
@@ -51,7 +51,7 @@ class ArticlesController < ApplicationController
   def article_add
     @ngvideo = Ngvideo.new(ngvideo_params)
     @ngvideo.user_id = current_user.id
-    if   @ngvideo.save
+    if  @ngvideo.save
         flash[:notice] = '通報完了'
         redirect_to top_video_path
     else
