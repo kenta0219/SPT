@@ -81,7 +81,7 @@
 				</div>
 
 				<%= form_for @ngvideo, :url => article_add_path do |t| %>
-					<%= t.hidden_field :article_id, value: 2 %>
+					<%= t.hidden_field :article_id, value: @article.id %>
 					<%= t.submit 'For Informed Video' %>
 				<% end %>
 

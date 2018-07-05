@@ -49,14 +49,10 @@ class ArticlesController < ApplicationController
   end
 
   def article_add
-    @ngvideo = Ngvideo.new(ngvideo_params)
-    @ngvideo.user_id = current_user.id
-    if  @ngvideo.save
-        flash[:notice] = '通報完了'
-        redirect_to top_video_path
-    else
-      render 'show_video'
-    end
+    ngvideo = Ngvideo.new(ngvideo_params)
+    ngvideo.user_id = current_user.id
+    ngvideo.save
+    redirect_to top_video_path
   end
 
 
